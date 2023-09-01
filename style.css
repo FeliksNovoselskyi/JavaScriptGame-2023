@@ -1,0 +1,138 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    /* align-items: center; */
+    background: linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13));
+    /* display: flex; */
+    font-family:'IBM Plex Mono', monospace;
+    /* padding-top: 200px;
+    padding-left: 200px; */
+    height: inherit;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+
+#blocks {
+    border-color: #fff;
+    border-width: 10px;
+}
+
+.left {
+    scale: -1 1;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tablinks {
+    background-color: #c5c5c5;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border-width: 0px;
+    margin: 5px;
+    align-items: center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 20px;
+    
+}
+.tablinks:hover {
+    background-color: #b8b7b7;
+    cursor: pointer;
+}
+
+
+#signup {
+    border-radius: 25px;
+    display: flex;
+    margin: auto;
+    border-width: 0px;
+    margin-top: 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 20px;
+}
+
+#signin {
+    border-radius: 25px;
+    display: flex;
+    margin: auto;
+    border-width: 0px;
+    margin-top: 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 20px;
+}
+
+#p1signup {
+   color: #fff;
+   font-size: 40px;
+}
+
+#p2signup {
+    color: #fff;
+    font-size: 20px;
+ }
+
+#p3signup {
+   color: #fff;
+   font-size: 20px;
+}
+
+#p4signup {
+   color: #fff;
+   font-size: 20px;
+}
+
+#p1signin {
+   color: #fff;
+   font-size: 40px;
+}
+
+#p2signin {
+    color: #fff;
+    font-size: 20px;
+ }
+
+#p3signin {
+   color: #fff;
+   font-size: 20px;
+}
+
+#signupname {
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:'IBM Plex Mono', monospace;
+}
+
+#signuplogin {
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:'IBM Plex Mono', monospace;
+}
+
+#signuppassword {
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:'IBM Plex Mono', monospace;
+}
+
+#signinlogin {
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:'IBM Plex Mono', monospace;
+}
+
+#signinpassword  {
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:'IBM Plex Mono', monospace;
+}
+#p1game {
+    color: #fff;
+    font-family:'IBM Plex Mono', monospace;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div>
+        <button id = "button1" class = "tablinks" onclick="openTab(event, 'tab1')">Реєстрацiя</button>
+        <button id = "button2" class = "tablinks" onclick="openTab(event, 'tab2')">Aвторизацiя</button>
+    </div>
+        
+    <div id = "tab1" class="tabcontent"> 
+        <p id="p1signup">Реєстрація</p>
+        
+        <p id="p2signup">Введіть нікнейм</p>
+        <input id="signupname">
+
+        <p id="p3signup">Введіть логін</p>
+        <input id="signuplogin">
+
+        <p id="p4signup">Введіть пароль</p>
+        <input id="signuppassword">
+
+        <button id = "signup">Зареєструватися</button>
+        
+    </div>
+
+    
+    <div id = "tab2" class="tabcontent"> 
+        <p id="p1signin">Aвторизацiя</p>
+
+        <p id = "p2signin">Введіть логін</p>
+        <input id="signinlogin">
+
+        <p id = "p3signin">Введіть пароль</p>
+        <input id="signinpassword">
+
+        <button id = "signin">Aвторизуватися</button>
+        
+    </div>
+
+    <div id = "tab3" class = "tabcontent">
+        <p id = "p1game">Игра</p>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
