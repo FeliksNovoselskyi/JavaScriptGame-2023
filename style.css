@@ -14,8 +14,360 @@ body {
     height: inherit;
     justify-content: center;
     margin: auto;
-    
+    animation: none;
 }
+
+@keyframes changeSun{
+    0% {
+        background: linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13));
+    }
+    1% {
+        background: linear-gradient(to left,  rgb(41, 40, 40), rgb(23, 18, 18), rgb(18, 15, 15));
+    }
+    2% {
+        background: linear-gradient(to left,  rgb(44, 43, 43), rgb(26, 20, 20), rgb(23, 19, 19));
+    }
+    3% {
+        background: linear-gradient(to left,  rgb(45, 44, 44), rgb(27, 21, 21), rgb(26, 21, 21));
+    }
+    4% {
+        background: linear-gradient(to left,  rgb(47, 46, 46), rgb(28, 22, 22), rgb(28, 23, 23));
+    }
+    5% {
+        background: linear-gradient(to left,  rgb(48, 47, 47), rgb(30, 27, 27), rgb(31, 29, 29));
+    }
+    7% {
+        background: linear-gradient(to left,  rgb(49, 49, 49), rgb(34, 31, 31), rgb(34, 32, 32));
+    }
+    8% {
+        background: linear-gradient(to left,  rgb(49, 49, 49), rgb(37, 33, 33), rgb(35, 33, 33));
+    }
+    9% {
+        background: linear-gradient(to left,  rgb(49, 49, 49), rgb(38, 34, 34), rgb(37, 35, 35));
+    }
+    10% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(42, 38, 38), rgb(37, 34, 34));
+    }
+    11% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(45, 41, 41), rgb(44, 40, 40));
+    }
+    12% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(47, 43, 43), rgb(48, 44, 44));
+    }
+    13% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(48, 44, 44), rgb(49, 45, 45));
+    }
+    14% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(48, 44, 44), rgb(49, 47, 47));
+    }
+    15% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(48, 44, 44), rgb(51, 47, 47));
+    }
+    17% {
+        background: linear-gradient(to left,  rgb(52, 51, 51), rgb(54, 49, 49), rgb(59, 55, 55));
+    }
+    18% {
+        background: linear-gradient(to left,  rgb(52, 51, 51), rgb(57, 51, 51), rgb(64, 59, 59));
+    }
+    19% {
+        background: linear-gradient(to left,  rgb(52, 52, 52), rgb(59, 53, 53), rgb(71, 65, 65));
+    }
+    20% {
+        background: linear-gradient(to left,  rgb(52, 52, 52), rgb(62, 60, 60), rgb(81, 76, 76));
+    }
+    22% {
+        background: linear-gradient(to left,  rgb(55, 55, 55), rgb(65, 63, 63), rgb(82, 78, 78));
+    }
+    25% {
+        background: linear-gradient(to left,  rgb(57, 57, 57), rgb(69, 67, 67), rgb(84, 79, 79));
+    }
+    27% {
+        background: linear-gradient(to left,  rgb(61, 61, 61), rgb(72, 70, 70), rgb(84, 79, 79));
+    }
+    28% {
+        background: linear-gradient(to left,  rgb(62, 62, 62), rgb(75, 73, 73), rgb(84, 79, 79));
+    }
+    29% {
+        background: linear-gradient(to left,  rgb(62, 62, 62), rgb(77, 75, 75), rgb(85, 80, 80));
+    }
+    30% {
+        background: linear-gradient(to left,  rgb(64, 64, 64), rgb(79, 77, 77), rgb(85, 82, 82));
+    }
+    32% {
+        background: linear-gradient(to left,  rgb(65, 65, 65), rgb(82, 80, 80), rgb(88, 85, 85));
+    }
+    35% {
+        background: linear-gradient(to left,  rgb(68, 67, 67), rgb(86, 85, 85), rgb(91, 88, 88));
+    }
+    36% {
+        background: linear-gradient(to left,  rgb(68, 67, 67), rgb(86, 85, 85), rgb(93, 90, 90));
+    }
+    37% {
+        background: linear-gradient(to left,  rgb(69, 68, 68), rgb(88, 87, 87), rgb(95, 92, 92));
+    }
+    40% {
+        background: linear-gradient(to left,  rgb(71, 71, 71), rgb(89, 87, 87), rgb(99, 96, 96));
+    } 
+    42% {
+        background: linear-gradient(to left,  rgb(74, 73, 73), rgb(89, 87, 87), rgb(102, 99, 99));
+    }
+    45% {
+        background: linear-gradient(to left,  rgb(75, 75, 75), rgb(91, 89, 89), rgb(106, 104, 104));
+    }
+    46% {
+        background: linear-gradient(to left,  rgb(75, 75, 75), rgb(91, 89, 89), rgb(108, 106, 106));
+    }
+    47% {
+        background: linear-gradient(to left,  rgb(77, 76, 76), rgb(92, 91, 91), rgb(112, 111, 111));
+    }
+    50% {
+        background: linear-gradient(to left,  rgb(79, 79, 79), rgb(93, 91, 91), rgb(118, 114, 114));
+    }
+    52% {
+        background: linear-gradient(to left,  rgb(79, 79, 79), rgb(95, 93, 93), rgb(123, 120, 120));
+    }
+    55% {
+        background: linear-gradient(to left,  rgb(81, 80, 80), rgb(96, 95, 95), rgb(125, 121, 121));
+    }
+    57% {
+        background: linear-gradient(to left,  rgb(82, 81, 81), rgb(98, 97, 97), rgb(125, 121, 121));
+    }
+    60% {
+        background: linear-gradient(to left,  rgb(82, 82, 82), rgb(99, 97, 97), rgb(126, 122, 122));
+    }
+    65% {
+        background: linear-gradient(to left,  rgb(84, 84, 84), rgb(100, 98, 98), rgb(128, 124, 124));
+    }
+    67% {
+        background: linear-gradient(to left,  rgb(84, 84, 84), rgb(100, 98, 98), rgb(130, 127, 127));
+    }
+    70% {
+        background: linear-gradient(to left,  rgb(85, 85, 85), rgb(102, 100, 100), rgb(133, 129, 129));
+    }
+    72% {
+        background: linear-gradient(to left,  rgb(88, 87, 87), rgb(102, 100, 100), rgb(139, 135, 135));
+    }
+    75% {
+        background: linear-gradient(to left,  rgb(91, 90, 90), rgb(103, 102, 102), rgb(142, 138, 138));
+    }
+    76% {
+        background: linear-gradient(to left,  rgb(92, 92, 92), rgb(103, 102, 102), rgb(146, 142, 142));
+    }
+    77% {
+        background: linear-gradient(to left,  rgb(93, 93, 93), rgb(105, 104, 104), rgb(149, 145, 145));
+    }
+    80% {
+        background: linear-gradient(to left,  rgb(95, 94, 94), rgb(106, 104, 104), rgb(150, 145, 145));
+    }
+    82% {
+        background: linear-gradient(to left,  rgb(95, 94, 94), rgb(106, 104, 104), rgb(153, 148, 148));
+    }
+    85% {
+        background: linear-gradient(to left,  rgb(99, 98, 98), rgb(110, 109, 109), rgb(154, 150, 150));
+    }
+    87% {
+        background: linear-gradient(to left,  rgb(102, 101, 101), rgb(112, 112, 112), rgb(157, 153, 153));
+    }
+    88% {
+        background: linear-gradient(to left,  rgb(102, 101, 101), rgb(112, 112, 112), rgb(161, 159, 159));
+    }
+    89% {
+        background: linear-gradient(to left,  rgb(102, 101, 101), rgb(112, 112, 112), rgb(163, 162, 162));
+    }
+    90% {
+        background: linear-gradient(to left,  rgb(103, 103, 103), rgb(113, 111, 111), rgb(166, 161, 161));
+    }
+    92% {
+        background: linear-gradient(to left,  rgb(106, 106, 106), rgb(116, 115, 115), rgb(169, 164, 164));
+    }
+    95% {
+        background: linear-gradient(to left,  rgb(113, 113, 113), rgb(125, 123, 123), rgb(174, 170, 170));
+    }
+    97% {
+        background: linear-gradient(to left,  rgb(113, 113, 113), rgb(125, 123, 123), rgb(174, 170, 170));
+    }
+    100% {
+        background: linear-gradient(to left,  rgb(118, 118, 118), rgb(128, 122, 122), rgb(177, 172, 172));
+    }
+}
+ 
+@keyframes changeMoon{
+    0% {
+        background: linear-gradient(to left,  rgb(118, 118, 118), rgb(128, 122, 122), rgb(177, 172, 172));
+    }
+    1% {
+        background: linear-gradient(to left,  rgb(113, 113, 113), rgb(125, 123, 123), rgb(174, 170, 170));
+    }
+    2% {
+        background: linear-gradient(to left,  rgb(113, 113, 113), rgb(125, 123, 123), rgb(174, 170, 170));
+    }
+    3% {
+        background: linear-gradient(to left,  rgb(106, 106, 106), rgb(116, 115, 115), rgb(169, 164, 164));
+    }
+    4% {
+        background: linear-gradient(to left,  rgb(103, 103, 103), rgb(113, 111, 111), rgb(166, 161, 161));
+    }
+    5% {
+        background: linear-gradient(to left,  rgb(102, 101, 101), rgb(112, 112, 112), rgb(163, 162, 162));
+    }
+    7% {
+        background: linear-gradient(to left,  rgb(102, 101, 101), rgb(112, 112, 112), rgb(161, 159, 159));
+    }
+    8% {
+        background: linear-gradient(to left,  rgb(102, 101, 101), rgb(112, 112, 112), rgb(157, 153, 153));
+    }
+    9% {
+        background: linear-gradient(to left,  rgb(99, 98, 98), rgb(110, 109, 109), rgb(154, 150, 150));
+    }
+    10% {
+        background: linear-gradient(to left,  rgb(95, 94, 94), rgb(106, 104, 104), rgb(153, 148, 148));
+    }
+    11% {
+        background: linear-gradient(to left,  rgb(95, 94, 94), rgb(106, 104, 104), rgb(150, 145, 145));
+    }
+    12% {
+        background: linear-gradient(to left,  rgb(93, 93, 93), rgb(105, 104, 104), rgb(149, 145, 145));
+    }
+    13% {
+        background: linear-gradient(to left,  rgb(92, 92, 92), rgb(103, 102, 102), rgb(146, 142, 142));
+    }
+    14% {
+        background: linear-gradient(to left,  rgb(91, 90, 90), rgb(103, 102, 102), rgb(142, 138, 138));
+    }
+    15% {
+        background: linear-gradient(to left,  rgb(88, 87, 87), rgb(102, 100, 100), rgb(139, 135, 135));
+    }
+    17% {
+        background: linear-gradient(to left,  rgb(85, 85, 85), rgb(102, 100, 100), rgb(133, 129, 129));
+    }
+    18% {
+        background: linear-gradient(to left,  rgb(84, 84, 84), rgb(100, 98, 98), rgb(130, 127, 127));
+    }
+    19% {
+        background: linear-gradient(to left,  rgb(84, 84, 84), rgb(100, 98, 98), rgb(130, 127, 127));
+    }
+    20% {
+        background: linear-gradient(to left,  rgb(84, 84, 84), rgb(100, 98, 98), rgb(128, 124, 124));
+    }
+    22% {
+        background: linear-gradient(to left,  rgb(82, 82, 82), rgb(99, 97, 97), rgb(126, 122, 122));
+    }
+    25% {
+        background: linear-gradient(to left,  rgb(82, 81, 81), rgb(98, 97, 97), rgb(125, 121, 121));
+    }
+    27% {
+        background: linear-gradient(to left,  rgb(81, 80, 80), rgb(96, 95, 95), rgb(125, 121, 121));
+    }
+    28% {
+        background: linear-gradient(to left,  rgb(79, 79, 79), rgb(95, 93, 93), rgb(123, 120, 120));
+    }
+    29% {
+        background: linear-gradient(to left,  rgb(79, 79, 79), rgb(93, 91, 91), rgb(118, 114, 114));
+    }
+    30% {
+        background: linear-gradient(to left,  rgb(77, 76, 76), rgb(92, 91, 91), rgb(112, 111, 111));
+    }
+    32% {
+        background: linear-gradient(to left,  rgb(75, 75, 75), rgb(91, 89, 89), rgb(108, 106, 106));
+    }
+    35% {
+        background: linear-gradient(to left,  rgb(75, 75, 75), rgb(91, 89, 89), rgb(106, 104, 104));
+    }
+    36% {
+        background: linear-gradient(to left,  rgb(74, 73, 73), rgb(89, 87, 87), rgb(102, 99, 99));
+    }
+
+
+
+
+    37% {
+        background: linear-gradient(to left,  rgb(69, 68, 68), rgb(88, 87, 87), rgb(95, 92, 92));
+    }
+    40% {
+        background: linear-gradient(to left,  rgb(68, 67, 67), rgb(86, 85, 85), rgb(93, 90, 90));
+    }
+    42% {
+        background: linear-gradient(to left,  rgb(68, 67, 67), rgb(86, 85, 85), rgb(91, 88, 88));
+    }
+    45% {
+        background: linear-gradient(to left,  rgb(65, 65, 65), rgb(82, 80, 80), rgb(88, 85, 85));
+    }
+    46% {
+        background: linear-gradient(to left,  rgb(64, 64, 64), rgb(79, 77, 77), rgb(85, 82, 82));
+    }
+    47% {
+        background: linear-gradient(to left,  rgb(62, 62, 62), rgb(77, 75, 75), rgb(85, 80, 80));
+    }
+    50% {
+        background: linear-gradient(to left,  rgb(62, 62, 62), rgb(75, 73, 73), rgb(84, 79, 79));
+    }
+    52% {
+        background: linear-gradient(to left,  rgb(61, 61, 61), rgb(72, 70, 70), rgb(84, 79, 79));
+    }
+    55% {
+        background: linear-gradient(to left,  rgb(57, 57, 57), rgb(69, 67, 67), rgb(84, 79, 79));
+    }
+    57% {
+        background: linear-gradient(to left,  rgb(55, 55, 55), rgb(65, 63, 63), rgb(82, 78, 78));
+    }
+    60% {
+        background: linear-gradient(to left,  rgb(52, 52, 52), rgb(62, 60, 60), rgb(81, 76, 76));
+    }
+    65% {
+        background: linear-gradient(to left,  rgb(52, 52, 52), rgb(59, 53, 53), rgb(71, 65, 65));
+    }
+    67% {
+        background: linear-gradient(to left,  rgb(52, 51, 51), rgb(57, 51, 51), rgb(64, 59, 59));
+    }
+    70% {
+        background: linear-gradient(to left,  rgb(52, 51, 51), rgb(54, 49, 49), rgb(59, 55, 55));
+    }
+    72% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(48, 44, 44), rgb(49, 47, 47));
+    }
+    75% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(48, 44, 44), rgb(49, 45, 45));
+    }
+    76% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(47, 43, 43), rgb(48, 44, 44));
+    }
+    77% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(45, 41, 41), rgb(44, 40, 40));
+    }
+    80% {
+        background: linear-gradient(to left,  rgb(51, 50, 50), rgb(42, 38, 38), rgb(37, 34, 34));
+    }
+    82% {
+        background: linear-gradient(to left,  rgb(49, 49, 49), rgb(38, 34, 34), rgb(37, 35, 35));
+    }
+    85% {
+        background: linear-gradient(to left,  rgb(49, 49, 49), rgb(37, 33, 33), rgb(35, 33, 33));
+    }
+    87% {
+        background: linear-gradient(to left,  rgb(49, 49, 49), rgb(34, 31, 31), rgb(34, 32, 32));
+    }
+    88% {
+        background: linear-gradient(to left,  rgb(48, 47, 47), rgb(30, 27, 27), rgb(31, 29, 29));
+    }
+    89% {
+        background: linear-gradient(to left,  rgb(47, 46, 46), rgb(28, 22, 22), rgb(28, 23, 23));
+    }
+    90% {
+        background: linear-gradient(to left,  rgb(45, 44, 44), rgb(27, 21, 21), rgb(26, 21, 21));
+    }
+    92% {
+        background: linear-gradient(to left,  rgb(44, 43, 43), rgb(26, 20, 20), rgb(23, 19, 19));
+    }
+    95% {
+        background: linear-gradient(to left,  rgb(41, 40, 40), rgb(23, 18, 18), rgb(18, 15, 15));
+    }
+    97% {
+        background: linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13));
+    }
+    100% {
+        background: linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13));
+    }
+};
 
 
 #blocks {
