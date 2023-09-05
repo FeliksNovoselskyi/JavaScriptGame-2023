@@ -29,7 +29,17 @@ function createMap(listMap) {
                     undefined,
                     "img"
                 )              
-            };
+            } else if (cell == "d") {
+                let door = new Sprite(
+                    x, y,
+                    41, 82,
+                    "../images/door1.png",
+                    undefined,
+                    "img"
+                )
+                listElem.push(door)
+            }
+            
             x += 41
 
         }
