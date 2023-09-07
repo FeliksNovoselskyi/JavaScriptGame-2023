@@ -95,8 +95,8 @@ class Hero extends Sprite {
     // створюємо метод який відповідае за рух
     move(key, listElem) {
         let collisionTop = this.RECT.collisionTop(listElem, this.RECT.getRect(this.ELEMENT))
-        let collisionRight = this.RECT.collisionRight(listElem, this.RECT.getRect(this.ELEMENT))
-        let collisionLeft = this.RECT.collisionLeft(listElem,this.RECT.getRect(this.ELEMENT))
+        let collisionRight = this.RECT.collisionRight(listElem, this.RECT.getRect(this.ELEMENT), key)
+        let collisionLeft = this.RECT.collisionLeft(listElem,this.RECT.getRect(this.ELEMENT), key)
         // Перевіряємо на яку кнопку користувач натиснув для того, щоб герой розумів куди бігти
        if (key == "KeyD" && collisionRight != 'right') {
         // Видаляємо клас HTML-елемента для руху героя вправо
