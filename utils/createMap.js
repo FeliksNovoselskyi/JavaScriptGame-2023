@@ -49,14 +49,23 @@ function createMap(listMap) {
                 )
                 listElem.push(door)
             } else if (cell == "n") {
-                let nps = new Sprite(
+                let nps1 = new Sprite(
                     x, y,
                     41, 41,
-                    "../images/nps.png",
+                    "../images/nps1.png",
                     undefined,
                     "img"  
                 );
-                listElem.push(nps)
+                listElem.push(nps1)
+            } else if (cell == "m") {
+                let nps2 = new Sprite(
+                    x, y,
+                    41, 41,
+                    "../images/nps2.png",
+                    undefined,
+                    "img"  
+                );
+                listElem.push(nps2)
             } else if (cell == "c") {
                 let captive = new Sprite(
                     x, y,
@@ -66,7 +75,7 @@ function createMap(listMap) {
                     "img"  
                 );
                 listElem.push(captive) // коптерка
-            }
+            } 
             
             
             x += 41

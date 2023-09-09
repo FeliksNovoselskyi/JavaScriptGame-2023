@@ -1,3 +1,6 @@
+
+
+
 html{
     box-sizing: border-box;
     height: 100%;
@@ -500,4 +503,44 @@ body {
     margin: auto;
     background-color: transparent;
     border-color: transparent;
+}
+
+#bullet1 {
+    width: 10px;
+    height: 5px;
+    top: 1330px;
+    left: 250px;
+    border-radius: 7px;
+    position: relative;
+    background-color: yellow;
+    animation: bulletMove1 1s infinite linear;
+}
+
+@keyframes bulletMove1 {
+    0% {
+        left: 250px;
+    }
+    100% {
+        left: 720px;
+    }
+}
+
+#bullet2 {
+    width: 10px;
+    height: 5px;
+    top: 1410px;
+    left: 765px;
+    border-radius: 7px;
+    position: relative;
+    background-color: yellow;
+    animation: bulletMove2 1s infinite linear;
+}
+
+@keyframes bulletMove2 {
+    0% {
+        left: 765px;
+    }
+    100% {
+        left: 350px;
+    }
 }

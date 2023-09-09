@@ -6,7 +6,9 @@ class Rect {
         this.HEIGHT = height
         this.ELEMENT = element
         this.OPEN_DOOR_FLAG = false
-
+        this.NPS1_DEATH_FLAG = false
+        this.NPS2_DEATH_FLAG = false
+        
         this.RECT = this.getRect(this.ELEMENT)
     };  
 
@@ -27,10 +29,16 @@ class Rect {
             let rectElem = this.getRect(elem.ELEMENT)
             if (rect.bottom > rectElem.top + 10 && rect.top < rectElem.bottom - 10) {
                 if(rect.right > rectElem.left && rect.right < rectElem.right){
-                    if (elem.IMG_PATH.includes("nps") && key == "KeyE") {
+                    if (elem.IMG_PATH.includes("nps1") && key == "KeyE") {
                         elem.ELEMENT.remove()
+                        document.getElementById("bullet1").style.display = "none"
+                        this.NPS1_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("nps2") && key == "KeyE") {
+                        elem.ELEMENT.remove()
+                        document.getElementById("bullet2").style.display = "none"
+                        this.NPS2_DEATH_FLAG = true
                     } else if (elem.IMG_PATH.includes("captive")) {
-                        elem.ELEMENT.remove()
+                        elem.ELEMENT.remove() 
                         this.OPEN_DOOR_FLAG = true
                     }
                     else {
@@ -46,9 +54,15 @@ class Rect {
             let rectElem = this.getRect(elem.ELEMENT)
             if (rect.bottom > rectElem.top + 10 && rect.top < rectElem.bottom - 10) {
                 if(rect.left < rectElem.right && rect.left > rectElem.left){
-                    if (elem.IMG_PATH.includes("nps") && key == "KeyE") {
+                    if (elem.IMG_PATH.includes("nps1") && key == "KeyE") {
                         elem.ELEMENT.remove()
-                    } else if (elem.IMG_PATH.includes("door1") && this.OPEN_DOOR_FLAG) {
+                        document.getElementById("bullet1").style.display = "none"
+                        this.NPS1_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("nps2") && key == "KeyE") {
+                        elem.ELEMENT.remove()
+                        document.getElementById("bullet2").style.display = "none"
+                        this.NPS2_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("door1") && this.OPEN_DOOR_FLAG && this.NPS1_DEATH_FLAG && this.NPS2_DEATH_FLAG) {
                         elem.ELEMENT.remove()
                         this.OPEN_DOOR_FLAG = false
                     }
@@ -64,8 +78,14 @@ class Rect {
             let rectElem = this.getRect(elem.ELEMENT)
             if (rect.right > rectElem.left + 10 && rect.left < rectElem.right - 10) { 
                 if(rect.bottom > rectElem.top && rect.bottom < rectElem.bottom){
-                    if (elem.IMG_PATH.includes("nps")) {
+                    if (elem.IMG_PATH.includes("nps1")) {
                         elem.ELEMENT.remove()
+                        document.getElementById("bullet1").style.display = "none"
+                        this.NPS1_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("nps2")) {
+                        elem.ELEMENT.remove()
+                        document.getElementById("bullet2").style.display = "none"
+                        this.NPS2_DEATH_FLAG = true
                     } else {
                         return "top"
                     }  
@@ -78,8 +98,14 @@ class Rect {
             let rectElem = this.getRect(elem.ELEMENT)
             if (rect.right > rectElem.left + 10 && rect.left < rectElem.right - 10) { 
                 if(rect.top < rectElem.bottom && rect.top > rectElem.top){
-                    if (elem.IMG_PATH.includes("nps")) {
+                    if (elem.IMG_PATH.includes("nps1")) {
                         elem.ELEMENT.remove()
+                        document.getElementById("bullet1").style.display = "none"
+                        this.NPS1_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("nps2")) {
+                        elem.ELEMENT.remove()
+                        document.getElementById("bullet2").style.display = "none"
+                        this.NPS2_DEATH_FLAG = true
                     } else {
                         return "bottom"
                     }
