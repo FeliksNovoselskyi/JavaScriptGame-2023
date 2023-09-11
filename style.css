@@ -512,7 +512,7 @@ body {
     left: 250px;
     border-radius: 7px;
     position: relative;
-    background-color: yellow;
+    background-color: rgb(143, 143, 143);
     animation: bulletMove1 1s infinite linear;
 }
 
@@ -532,7 +532,8 @@ body {
     left: 765px;
     border-radius: 7px;
     position: relative;
-    background-color: yellow;
+    background-color: rgb(143, 143, 143);
+    /* background-image: url(images/nps2/arrowLeft.png); */
     animation: bulletMove2 1s infinite linear;
 }
 
@@ -543,4 +544,12 @@ body {
     100% {
         left: 350px;
     }
+}
+
+#counter {
+    font-size: 20px;
+    font-family:'IBM Plex Mono', monospace;
+    color: #fff;
+    margin-top: 600px;
+    margin-left: -950px;
 }

@@ -8,6 +8,7 @@ class Rect {
         this.OPEN_DOOR_FLAG = false
         this.NPS1_DEATH_FLAG = false
         this.NPS2_DEATH_FLAG = false
+        // 1 = 0
         
         this.RECT = this.getRect(this.ELEMENT)
     };  
@@ -40,8 +41,14 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("captive")) {
                         elem.ELEMENT.remove() 
                         this.OPEN_DOOR_FLAG = true
-                    }
-                    else {
+                    } else if (elem.IMG_PATH.includes("coin")) {
+                        elem.ELEMENT.remove()
+                        // 1++
+                        const score = document.getElementById("counter")
+                        score.textContent = parseInt(score.textContent) + 1
+                    } else if (elem.IMG_PATH.includes("fire")) {
+                        
+                    } else {
                         return "right"
                     }
                         
@@ -65,8 +72,14 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("door1") && this.OPEN_DOOR_FLAG && this.NPS1_DEATH_FLAG && this.NPS2_DEATH_FLAG) {
                         elem.ELEMENT.remove()
                         this.OPEN_DOOR_FLAG = false
-                    }
-                    else {
+                    } else if (elem.IMG_PATH.includes("coin")) {
+                        elem.ELEMENT.remove()   
+                        // 1++
+                        const score = document.getElementById("counter")
+                        score.textContent = parseInt(score.textContent) + 1
+                    } else if (elem.IMG_PATH.includes("fire")) {
+                        
+                    } else {
                         return "left"
                     }
                 }
@@ -86,6 +99,13 @@ class Rect {
                         elem.ELEMENT.remove()
                         document.getElementById("bullet2").style.display = "none"
                         this.NPS2_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("coin")) {
+                        elem.ELEMENT.remove()
+                        // 1++
+                        const score = document.getElementById("counter")
+                        score.textContent = parseInt(score.textContent) + 1
+                    } else if (elem.IMG_PATH.includes("fire")) {
+                        
                     } else {
                         return "top"
                     }  
@@ -106,6 +126,13 @@ class Rect {
                         elem.ELEMENT.remove()
                         document.getElementById("bullet2").style.display = "none"
                         this.NPS2_DEATH_FLAG = true
+                    } else if (elem.IMG_PATH.includes("coin")) {
+                        elem.ELEMENT.remove()
+                        // 1++
+                        const score = document.getElementById("counter")
+                        score.textContent = parseInt(score.textContent) + 1
+                    } else if (elem.IMG_PATH.includes("fire")) {
+                        
                     } else {
                         return "bottom"
                     }
@@ -114,5 +141,6 @@ class Rect {
         }
     }  
 }
+
 
 export default Rect

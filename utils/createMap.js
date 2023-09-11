@@ -52,7 +52,7 @@ function createMap(listMap) {
                 let nps1 = new Sprite(
                     x, y,
                     41, 41,
-                    "../images/nps1.png",
+                    "../images/nps1/nps1_1.png",
                     undefined,
                     "img"  
                 );
@@ -61,7 +61,7 @@ function createMap(listMap) {
                 let nps2 = new Sprite(
                     x, y,
                     41, 41,
-                    "../images/nps2.png",
+                    "../images/nps2/nps2_1.png",
                     undefined,
                     "img"  
                 );
@@ -75,6 +75,24 @@ function createMap(listMap) {
                     "img"  
                 );
                 listElem.push(captive) // коптерка
+            } else if (cell == "3") {
+                let coin = new Sprite(
+                    x, y,
+                    41, 41,
+                    "../images/coin.png",
+                    undefined,
+                    "img"  
+                );
+                listElem.push(coin) // коптерка
+            } else if (cell == "f") {
+                let fire = new Sprite(
+                    x, y,
+                    41, 41,
+                    "../images/fire/fire1.png",
+                    undefined,
+                    "img"  
+                );
+                listElem.push(fire) // коптерка
             } 
             
             
