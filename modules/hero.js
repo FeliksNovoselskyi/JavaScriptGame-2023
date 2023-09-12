@@ -27,6 +27,8 @@ class Hero extends Sprite {
         this.GRAVITY_SPEED = 2
         this.MOVE_RIGHT = false
         this.MOVE_LEFT = false
+        this.HP_COUNTER = 10
+
     }
     gravity(listElem){
         let collisionTop = this.RECT.collisionTop(listElem, this.RECT.getRect(this.ELEMENT))
@@ -96,7 +98,8 @@ class Hero extends Sprite {
     move(key, listElem) {
         let collisionTop = this.RECT.collisionTop(listElem, this.RECT.getRect(this.ELEMENT))
         let collisionRight = this.RECT.collisionRight(listElem, this.RECT.getRect(this.ELEMENT), key)
-        let collisionLeft = this.RECT.collisionLeft(listElem,this.RECT.getRect(this.ELEMENT), key)
+        let collisionLeft = this.RECT.collisionLeft(listElem, this.RECT.getRect(this.ELEMENT), key)
+        let collisionBottom = this.RECT.collisionBottom(listElem, this.RECT.getRect(this.ELEMENT))
         // Перевіряємо на яку кнопку користувач натиснув для того, щоб герой розумів куди бігти
        if (key == "KeyD" && collisionRight != 'right') {
         // Видаляємо клас HTML-елемента для руху героя вправо
@@ -109,6 +112,54 @@ class Hero extends Sprite {
        };
        if (key == 'KeyW' && collisionTop){
             this.jump(listElem)
+       }
+
+       if (collisionBottom == "death") {
+            this.HP_BAR = document.querySelector("#hpbarimg")
+            this.HP_COUNTER -= 1
+            console.log(this.HP_COUNTER)
+            if (this.HP_COUNTER == 9) {
+                console.log(1)
+                this.HP_BAR.src = "./images/hp/9.png"
+            }
+            
+            if (this.HP_COUNTER == 8) {
+                this.HP_BAR.src = "./images/hp/8.png"
+            }
+
+            if (this.HP_COUNTER == 7) {
+                this.HP_BAR.src = "./images/hp/7.png"
+            }
+
+            if (this.HP_COUNTER == 6) {
+                this.HP_BAR.src = "./images/hp/6.png"
+            }
+
+            if (this.HP_COUNTER == 5) {
+                this.HP_BAR.src = "./images/hp/5.png"
+            }
+
+            if (this.HP_COUNTER == 4) {
+                this.HP_BAR.src = "./images/hp/4.png"
+            }
+
+            if (this.HP_COUNTER == 3) {
+                this.HP_BAR.src = "./images/hp/3.png"
+            }
+
+            if (this.HP_COUNTER == 2) {
+                this.HP_BAR.src = "./images/hp/2.png"
+            }
+
+            if (this.HP_COUNTER == 1) {
+                this.HP_BAR.src = "./images/hp/1.png"
+            }
+
+            if (this.HP_COUNTER == 0) {
+                this.HP_BAR.src = "./images/hp/0.png"
+                this.ELEMENT.remove()
+                document.getElementById("p1game").textContent = "Game over!"
+            }
        }
     }
     // gravityJump() {
