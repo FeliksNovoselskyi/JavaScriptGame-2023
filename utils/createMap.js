@@ -78,24 +78,31 @@ function createMap(listMap) {
             } else if (cell == "3") {
                 let coin = new Sprite(
                     x, y,
-                    41, 41,
+                    36, 36,
                     "../images/coin.png",
                     undefined,
-                    "img"  
+                    "img"
                 );
                 listElem.push(coin) // коптерка
             } else if (cell == "f") {
                 let fire = new Sprite(
                     x, y,
                     41, 41,
-                    "../images/fire/fire1.png",
+                    "../images/fire_box.png",
                     undefined,
-                    "img"  
+                    "img"
                 );
                 listElem.push(fire) // коптерка
-            } 
-            
-            
+            } // else if (cell == "b") {
+            //     let bullet = new Sprite(
+            //         x, y,
+            //         10, 5,
+            //         "../images/bullet.png",
+            //         undefined,
+            //         "img"  
+            //     );
+            //     listElem.push(bullet) // коптерка
+            // }
             x += 41
 
         }

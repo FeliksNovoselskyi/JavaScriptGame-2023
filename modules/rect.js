@@ -46,7 +46,7 @@ class Rect {
                         // 1++
                         const score = document.getElementById("counter")
                         score.textContent = parseInt(score.textContent) + 1
-                    } else if (elem.IMG_PATH.includes("fire1")) {
+                    } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death"
                     } else {
                         return "right"
@@ -77,7 +77,7 @@ class Rect {
                         // 1++
                         const score = document.getElementById("counter")
                         score.textContent = parseInt(score.textContent) + 1
-                    } else if (elem.IMG_PATH.includes("fire1")) {
+                    } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death"
                     } else {
                         return "left"
@@ -104,7 +104,7 @@ class Rect {
                         // 1++
                         const score = document.getElementById("counter")
                         score.textContent = parseInt(score.textContent) + 1
-                    } else if (elem.IMG_PATH.includes("fire1")) {
+                    } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death"
                     } else {
                         return "top"
@@ -131,7 +131,7 @@ class Rect {
                         // 1++
                         const score = document.getElementById("counter")
                         score.textContent = parseInt(score.textContent) + 1
-                    } else if (elem.IMG_PATH.includes("fire1")) {
+                    } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death"
                     } else {
                         return "bottom"

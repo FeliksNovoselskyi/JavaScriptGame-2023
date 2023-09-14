@@ -24,10 +24,12 @@ class Hero extends Sprite {
         // Створюємо властивість IMG_NUM і робимо ми його для анімації
         // (а точніше це є кадром зображення, стандартним буде 4, тому що перший index кадру бігу є 4)
         this.IMG_NUM = 4 
+        this.FIRE_IMG_NUM = 1 
         this.GRAVITY_SPEED = 2
         this.MOVE_RIGHT = false
         this.MOVE_LEFT = false
         this.HP_COUNTER = 10
+        this.BULLET_HP_FLAG = false
 
     }
     gravity(listElem){
@@ -56,7 +58,7 @@ class Hero extends Sprite {
         }
         // Додаємо по 1-ці до IMG_NUM, для того, щоб змінювались кадри спрайту.
         this.IMG_NUM++;
-        
+      
         // створюємо шлях до зображення
         this.IMG_PATH = `/images/player/${this.IMG_NUM}.png`
         //  Передаємо до елементу зображення яке має бути
@@ -68,6 +70,7 @@ class Hero extends Sprite {
         let collisionTop = this.RECT.collisionTop(listElem, this.RECT.getRect(this.ELEMENT))
         let collisionRight = this.RECT.collisionRight(listElem, this.RECT.getRect(this.ELEMENT))
         let collisionLeft = this.RECT.collisionLeft(listElem,this.RECT.getRect(this.ELEMENT))
+        
         if (this.MOVE_RIGHT && collisionRight != "right") {
             this.ELEMENT.classList.remove("left")
             // додаємо клас HTML-елемента щоб він відповідав напрямку руху героя вправо  
@@ -117,9 +120,7 @@ class Hero extends Sprite {
        if (collisionBottom == "death") {
             this.HP_BAR = document.querySelector("#hpbarimg")
             this.HP_COUNTER -= 1
-            console.log(this.HP_COUNTER)
             if (this.HP_COUNTER == 9) {
-                console.log(1)
                 this.HP_BAR.src = "./images/hp/9.png"
             }
             
@@ -160,18 +161,101 @@ class Hero extends Sprite {
                 this.ELEMENT.remove()
                 document.getElementById("p1game").textContent = "Game over!"
             }
-       }
+        }
+
+
+    //    if (.style.left >= this.ELEMENT.left) {
+            // this.ELEMENT.remove()
+    //    }
     }
     // gravityJump() {
     //     this.GRAVITY_SPEED += 0.05
     // }
     jump(listElem){
         this.GRAVITY_SPEED = -2
-        setTimeout(() => this.GRAVITY_SPEED = 2, 400)
+        setTimeout(() => this.GRAVITY_SPEED = 2, 425)
     }
     
+    fireAnimation() {
+        if (this.FIRE_IMG_NUM >= 3){
+            // якщо умова правдива - задаємо картинку за умовчанням тобто під номером 4
+            this.FIRE_IMG_NUM = 1
+        }
+
+        this.FIRE_IMG_NUM++;
+
+        document.getElementById("fire-image-animation1").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation1").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation1").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+
+        document.getElementById("fire-image-animation2").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation2").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation2").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+
+        document.getElementById("fire-image-animation3").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation3").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation3").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+
+
+        document.getElementById("fire-image-animation4").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation4").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation4").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
     
+        document.getElementById("fire-image-animation5").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation5").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+        document.getElementById("fire-image-animation5").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`
+
+        this.BULLET1_A = document.getElementById("bullet1")
+        this.BULLET2_A = document.getElementById("bullet2")
+
+        this.BULLET1_COMPUTED_STYLE = window.getComputedStyle(this.BULLET1_A)
+        this.BULLET2_COMPUTED_STYLE = window.getComputedStyle(this.BULLET2_A)
+        // this.ELEMENT_COMPUTED_STYLE = window.getComputedStyle(this.ELEMENT)
+        
+        this.B1_LEFT = this.BULLET1_COMPUTED_STYLE.getPropertyValue('left')
+        this.B2_LEFT = this.BULLET2_COMPUTED_STYLE.getPropertyValue('left')
+        this.B1_TOP = this.BULLET1_COMPUTED_STYLE.getPropertyValue('top')
+        this.B2_TOP = this.BULLET2_COMPUTED_STYLE.getPropertyValue('top')
+        
+        // this.E_LEFT = this.ELEMENT_COMPUTED_STYLE.getPropertyValue('left')
+
+        this.BULLET1_LEFT = parseInt(parseFloat(this.B1_LEFT))
+        this.BULLET2_LEFT = parseInt(parseFloat(this.B2_LEFT))
+        this.BULLET1_TOP = parseFloat(this.B1_TOP)
+        this.BULLET2_TOP = parseFloat(this.B2_TOP)
+
+        if (this.BULLET1_LEFT == this.X && this.Y == 1396 || this.BULLET1_LEFT == this.X - 1 && this.Y == 1396 || this.BULLET1_LEFT == this.X + 1 && this.Y == 1396) {
+            this.BULLET_HP_FLAG = true
+            if (this.BULLET_HP_FLAG) {
+                this.HP_BAR = document.querySelector("#hpbarimg")
+                this.ELEMENT.remove()
+                console.log(this.BULLET_LEFT1)
+                console.log(this.X)
+                this.HP_BAR.src = "./images/hp/0.png"
+                this.ELEMENT.remove()
+                document.getElementById("p1game").textContent = "Game over!"
+            }
+        }
+
+        if (this.BULLET2_LEFT == this.X && this.Y == 1478 || this.BULLET2_LEFT == this.X - 1 && this.Y == 1478 || this.BULLET2_LEFT == this.X + 1 && this.Y == 1478) {
+            this.BULLET_HP_FLAG = true
+            if (this.BULLET_HP_FLAG) {
+                this.HP_BAR = document.querySelector("#hpbarimg")
+                this.ELEMENT.remove()
+                console.log(this.BULLET_LEFT2)
+                console.log(this.X)
+                this.HP_BAR.src = "./images/hp/0.png"
+                this.ELEMENT.remove()
+                document.getElementById("p1game").textContent = "Game over!"
+            }
+        }
+
+        // console.log(this.BULLET1_LEFT)
+    } 
     
+    // bulletMove() {
+
+    // }
 }
 
 export default Hero

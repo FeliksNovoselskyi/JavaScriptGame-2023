@@ -513,7 +513,7 @@ body {
     border-radius: 7px;
     position: relative;
     background-color: rgb(143, 143, 143);
-    animation: bulletMove1 1s infinite linear;
+    animation: bulletMove1 4s infinite linear;
 }
 
 @keyframes bulletMove1 {
@@ -534,7 +534,7 @@ body {
     position: relative;
     background-color: rgb(143, 143, 143);
     /* background-image: url(images/nps2/arrowLeft.png); */
-    animation: bulletMove2 1s infinite linear;
+    animation: bulletMove2 3s infinite linear;
 }
 
 @keyframes bulletMove2 {
@@ -553,4 +553,36 @@ body {
     position: fixed;
     left: 51px;
     top: -20px;
+}
+
+#fire1 {
+    position: absolute;
+    margin-top: 1041px;
+    margin-left: 190px;
+}
+
+
+#fire2 {
+    position: absolute;
+    margin-top: 1041px;
+    margin-left: 520px;
+}
+
+#fire3 {
+    position: absolute;
+    margin-top: 1041px;
+    margin-left: 600px;
+}
+
+
+#fire4 {
+    position: absolute;
+    margin-top: 1041px;
+    margin-left: 720px;
+}
+
+#fire5 {
+    position: absolute;
+    margin-top: 1041px;
+    margin-left: 810px;
 }

@@ -41,7 +41,7 @@ let listMap = [
     "20003000002000000002002".split(""),
     "20002000002000002000002".split(""),
     "10000000001000000002001".split(""),
-    "200h0020001000200022001".split(""),
+    "20000020001000200022001".split(""),
     "22020000001200002000002".split(""),
     "20010000022000000000002".split(""),
     "20110000000000200300001".split(""),
@@ -54,7 +54,7 @@ let listMap = [
     "20000000000200000000202".split(""),
     "20000n00000000000200002".split(""),
     "20000100000000200000002".split(""),
-    "1000000020000000000m002".split(""),
+    "100000002000h000000m002".split(""),
     "d0000200000010020002001".split(""),
     "00000000000000000000002".split(""),
     "22122222211122221122222".split(""),
@@ -124,8 +124,10 @@ signInButton.addEventListener("click", () => {
                     function gameLoop(){
                         hero.gravity(listElem)
                         hero.moveLoop(listElem)
+                        hero.fireAnimation()
                         setTimeout(gameLoop, 1) // Метод, який викликає функцію кожні 16 міллісекунд
                     }
+                    
                     // Запускаемо функцію gameLoop
                     gameLoop();
                     //  створюємо подію натискання на кнопки руху
@@ -187,7 +189,7 @@ registrationTab.addEventListener("click", (event) => {
 })
 
 authorizationTab.addEventListener("click", (event) => {
-    openTab(event, "tab2") 
+    openTab(event, "tab2")
 })
 
 function openTab(event, tabName){
