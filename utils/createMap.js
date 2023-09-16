@@ -93,7 +93,38 @@ function createMap(listMap) {
                     "img"
                 );
                 listElem.push(fire) // коптерка
-            } // else if (cell == "b") {
+            } else if (cell == "t") {
+                let seller = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/seller.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(seller); // коптерка
+            } else if (cell == "5") {
+                let door2 = new Sprite(
+                    x, y,
+                    41,82,
+                    "../images/door2.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(door2); // коптерка
+            }             
+             else if (cell == "6") {
+                let door2 = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/buttonlvl3.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(door2); // коптерка
+            } 
+            
+            
+            // else if (cell == "b") {
             //     let bullet = new Sprite(
             //         x, y,
             //         10, 5,

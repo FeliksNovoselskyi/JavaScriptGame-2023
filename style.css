@@ -17,7 +17,9 @@ body {
     height: inherit;
     justify-content: center;
     margin: auto;
-    animation: none;
+    animation: none;  
+    /* background-image: url(images/bg1.png);
+    background-size: cover; */
 }
 
 @keyframes changeSun{
@@ -557,32 +559,48 @@ body {
 
 #fire1 {
     position: absolute;
-    margin-top: 1041px;
-    margin-left: 190px;
+    margin-top: 1051px;
+    margin-left: 160px;
 }
 
 
 #fire2 {
     position: absolute;
-    margin-top: 1041px;
-    margin-left: 520px;
+    margin-top: 1051px;
+    margin-left: 490px;
 }
 
 #fire3 {
     position: absolute;
-    margin-top: 1041px;
-    margin-left: 600px;
+    margin-top: 1051px;
+    margin-left: 590px;
 }
 
 
 #fire4 {
     position: absolute;
-    margin-top: 1041px;
-    margin-left: 720px;
+    margin-top: 1051px;
+    margin-left: 710px;
 }
 
 #fire5 {
     position: absolute;
-    margin-top: 1041px;
-    margin-left: 810px;
+    margin-top: 1051px;
+    margin-left: 800px;
+}
+
+#arrowlvl3 {
+    margin-top: 475px;
+    margin-left: -855px;
+    position: absolute;
+    animation: none;
+} 
+@keyframes arrowRightMove {
+    0% {
+        margin-left: -855px;
+    }
+
+    100% {
+        margin-left: 855px;
+    }
 }
