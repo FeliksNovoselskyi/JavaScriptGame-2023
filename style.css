@@ -19,7 +19,8 @@ body {
     margin: auto;
     animation: none;  
     /* background-image: url(images/bg1.png);
-    background-size: cover; */
+    background-attachment: fixed; */
+    background-size: cover;
 }
 
 @keyframes changeSun{
@@ -561,6 +562,7 @@ body {
     position: absolute;
     margin-top: 1051px;
     margin-left: 160px;
+    animation: none; 
 }
 
 
@@ -568,12 +570,14 @@ body {
     position: absolute;
     margin-top: 1051px;
     margin-left: 490px;
+    animation: none;
 }
 
 #fire3 {
     position: absolute;
     margin-top: 1051px;
     margin-left: 590px;
+    animation: none;
 }
 
 
@@ -581,13 +585,36 @@ body {
     position: absolute;
     margin-top: 1051px;
     margin-left: 710px;
+    animation: none;
 }
 
 #fire5 {
     position: absolute;
     margin-top: 1051px;
     margin-left: 800px;
+    animation: none;
 }
+
+@keyframes fireGoDown {
+    0% {
+        margin-top: 1051px;
+    }
+
+    100% {
+        margin-top: 1081px;
+    }
+}
+
+@keyframes fireGoUp {
+    0% {
+        margin-top: 505px;
+    }
+
+    100% {
+        margin-top: 481px;
+    }
+}
+
 
 #arrowlvl3 {
     margin-top: 475px;
@@ -604,3 +631,4 @@ body {
         margin-left: 855px;
     }
 }
+

@@ -21,16 +21,16 @@ let listMap = [
     "00000000000000000000000".split(""),
     "00000000000000000000000".split(""),
     "22222111222122222211122".split(""),
-    "20000000000000000200002".split(""),
-    "20060000000000000200002".split(""),
-    "20020000000000100000001".split(""),
+    "20000000000000000000072".split(""),
+    "20060000000000000000h02".split(""),
+    "20020000000000100200221".split(""),
     "20002000000000000000001".split(""),
     "20000010000000020000001".split(""),
     "20000000000000000000002".split(""),
     "20000001000000000010002".split(""),
     "20000000000000000000001".split(""),
     "20000000200000000200002".split(""),
-    "20000200002000200000001".split(""),
+    "20000200002b00200000001".split(""),
     "2020000210000000000000d".split(""),
     "20000000000000000000000".split(""),
     "20022112221222211222222".split(""),
@@ -41,7 +41,7 @@ let listMap = [
     "20003000002000000002002".split(""),
     "20002000002000002000002".split(""),
     "1000000000100000000t001".split(""),
-    "200h0020001000200022001".split(""),
+    "20000020001000200022001".split(""),
     "22020000001200002000002".split(""),
     "20010000022000000000002".split(""),
     "20110000000000200300001".split(""),
@@ -126,13 +126,15 @@ signInButton.addEventListener("click", () => {
                     document.getElementById("button1").style.display = "none";
                     document.getElementById("button2").style.display = "none";
                     document.getElementById("button3").style.display = "none";
-                    document.getElementById("all").style.backgroundImage = "linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13))";
+                    document.querySelector("body").style.backgroundImage = "url(images/bg1.png)";
+                    document.querySelector("body").style.backgroundAttachment = "fixed";
+                    
                     let [listElem, hero] = createMap(listMap);
 
                     function gameLoop(){
                         hero.gravity(listElem); // Вызываем метод который отвечает за гравитацию
                         hero.moveLoop(listElem); // Вызываем метод который отвечает за движения персонажа
-                        hero.fireAnimation(); // Вызывем метод который отвечает за анимацию огня
+                        // hero.fireAnimation(); // Вызывем метод который отвечает за анимацию огня
                         setTimeout(gameLoop, 1); // Метод, который вызывает функцию каждую миллисекунду
                     };
                     

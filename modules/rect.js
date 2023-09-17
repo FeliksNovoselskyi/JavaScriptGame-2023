@@ -13,6 +13,7 @@ class Rect {
         this.FULL_SCORE_LEFT = false; //
         this.FULL_SCORE_TOP = false; //
         this.FULL_SCORE_BOTTOM = false; //
+        this.BUTTONLVL3_RIGHT = false; //
         
         // 1 = 0
         
@@ -78,6 +79,53 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("seller") && key == "KeyE" && parseInt(score.textContent) == 3) {
                         this.OPEN_DOOR_FLAG = true;
                         this.LEVEL2_FLAG = true;
+                    //
+                    } else if (elem.IMG_PATH.includes("secret_door")) {
+                        elem.ELEMENT.src = "./images/buttonlvl3_right.png";
+                        elem.ELEMENT.style.height = "41px";
+                        elem.ELEMENT.style.top = "165px";
+                        this.BUTTONLVL3_RIGHT = true;
+                        if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
+                            console.log(1);
+                            document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
+
+                            
+                            setTimeout(() => {
+                                document.getElementById("fire1").style.marginLeft = "360px";
+
+
+                                document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
+
+                                document.getElementById("fire1").style.marginTop = "481px";
+                                document.getElementById("fire2").style.marginTop = "481px";
+                                document.getElementById("fire3").style.marginTop = "481px";
+                                document.getElementById("fire4").style.marginTop = "481px";
+                                document.getElementById("fire5").style.marginTop = "481px";
+
+                                this.BUTTONLVL3_RIGHT = false;
+                            }, 2000)
+
+                            document.getElementById("fire1").style.marginTop = "1081px";
+                            document.getElementById("fire2").style.marginTop = "1081px";
+                            document.getElementById("fire3").style.marginTop = "1081px";
+                            document.getElementById("fire4").style.marginTop = "1081px";
+                            document.getElementById("fire5").style.marginTop = "1081px";
+
+                            document.getElementById("fire1").style.marginTop = "505px";
+                            document.getElementById("fire2").style.marginTop = "505px";
+                            document.getElementById("fire3").style.marginTop = "505px";
+                            document.getElementById("fire4").style.marginTop = "505px";
+                            document.getElementById("fire5").style.marginTop = "505px";
+
+                        };
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -134,6 +182,53 @@ class Rect {
                         if (key == "KeyE"){
                             return "pressbuttonlvl3";
                         };
+                    //
+                    } else if (elem.IMG_PATH.includes("secret_door")) {
+                        elem.ELEMENT.src = "./images/buttonlvl3_right.png";
+                        elem.ELEMENT.style.height = "41px";
+                        elem.ELEMENT.style.top = "165px";
+                        this.BUTTONLVL3_RIGHT = true;
+                        if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
+                            console.log(1);
+                            document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
+                            document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
+
+                            
+                            setTimeout(() => {
+                                document.getElementById("fire1").style.marginLeft = "360px";
+
+
+                                document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
+                                document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
+
+                                document.getElementById("fire1").style.marginTop = "481px";
+                                document.getElementById("fire2").style.marginTop = "481px";
+                                document.getElementById("fire3").style.marginTop = "481px";
+                                document.getElementById("fire4").style.marginTop = "481px";
+                                document.getElementById("fire5").style.marginTop = "481px";
+
+                                this.BUTTONLVL3_RIGHT = false;
+                            }, 2000)
+
+                            document.getElementById("fire1").style.marginTop = "1081px";
+                            document.getElementById("fire2").style.marginTop = "1081px";
+                            document.getElementById("fire3").style.marginTop = "1081px";
+                            document.getElementById("fire4").style.marginTop = "1081px";
+                            document.getElementById("fire5").style.marginTop = "1081px";
+
+                            document.getElementById("fire1").style.marginTop = "505px";
+                            document.getElementById("fire2").style.marginTop = "505px";
+                            document.getElementById("fire3").style.marginTop = "505px";
+                            document.getElementById("fire4").style.marginTop = "505px";
+                            document.getElementById("fire5").style.marginTop = "505px";
+    
+                        };
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -175,6 +270,8 @@ class Rect {
 
                     } else if (elem.IMG_PATH.includes("buttonlvl3")) {
                         
+                    } else if (elem.IMG_PATH.includes("secret_door")) {
+                    
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -215,7 +312,9 @@ class Rect {
                         score.textContent = parseInt(score.textContent) + 1;
 
                     } else if (elem.IMG_PATH.includes("buttonlvl3")) {
-                        
+                       
+                    } else if (elem.IMG_PATH.includes("secret_door")) {
+                    
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";

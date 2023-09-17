@@ -111,29 +111,35 @@ function createMap(listMap) {
                     "img"
                 );
                 listElem.push(door2); // коптерка
-            }             
-             else if (cell == "6") {
-                let door2 = new Sprite(
+            } else if (cell == "6") {
+                let buttonlvl3 = new Sprite(
                     x, y,
                     41,41,
                     "../images/buttonlvl3.png",
                     undefined,
                     "img"
                 );
-                listElem.push(door2); // коптерка
+                listElem.push(buttonlvl3); // коптерка
+            } else if (cell == "b") {
+                let boss = new Sprite(
+                    x, y,
+                    123,123,
+                    "../images/boss.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(boss); // коптерка
+            } else if (cell == "7") {
+                let secretdoor = new Sprite(
+                    x, y,
+                    41,82,
+                    "../images/secret_door.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(secretdoor); // коптерка
             } 
-            
-            
-            // else if (cell == "b") {
-            //     let bullet = new Sprite(
-            //         x, y,
-            //         10, 5,
-            //         "../images/bullet.png",
-            //         undefined,
-            //         "img"  
-            //     );
-            //     listElem.push(bullet) // коптерка
-            // }
+        
             x += 41
 
         }
