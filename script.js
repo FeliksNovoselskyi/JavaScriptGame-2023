@@ -134,7 +134,7 @@ signInButton.addEventListener("click", () => {
                     function gameLoop(){
                         hero.gravity(listElem); // Вызываем метод который отвечает за гравитацию
                         hero.moveLoop(listElem); // Вызываем метод который отвечает за движения персонажа
-                        // hero.fireAnimation(); // Вызывем метод который отвечает за анимацию огня
+                        hero.fireAnimation(); // Вызывем метод который отвечает за анимацию огня
                         setTimeout(gameLoop, 1); // Метод, который вызывает функцию каждую миллисекунду
                     };
                     
