@@ -124,7 +124,7 @@ function createMap(listMap) {
                 let boss = new Sprite(
                     x, y,
                     123,123,
-                    "../images/boss.png",
+                    "../images/boss_box.png",
                     undefined,
                     "img"
                 );
@@ -138,7 +138,26 @@ function createMap(listMap) {
                     "img"
                 );
                 listElem.push(secretdoor); // коптерка
+            } else if (cell == "e") {
+                let e = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/E_clue.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(e); // коптерка
+            } else if (cell == "8") {
+                let corner = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/corner_block.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(corner); // коптерка
             } 
+        
         
             x += 41
 

@@ -14,6 +14,8 @@ class Rect {
         this.FULL_SCORE_TOP = false; //
         this.FULL_SCORE_BOTTOM = false; //
         this.BUTTONLVL3_RIGHT = false; //
+        this.BOSS_DEATH_FLAG1 = false;
+        this.BOSS_DEATH_FLAG2 = false;
         
         // 1 = 0
         
@@ -73,6 +75,7 @@ class Rect {
 
                     } else if (elem.IMG_PATH.includes("buttonlvl3")) {
                         if (key == "KeyE"){
+                            this.BOSS_DEATH_FLAG1 = true;
                             return "pressbuttonlvl3";
                         };
                     //
@@ -86,46 +89,60 @@ class Rect {
                         elem.ELEMENT.style.top = "165px";
                         this.BUTTONLVL3_RIGHT = true;
                         if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
-                            console.log(1);
-                            document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
+                            if (document.getElementById("fire1").style.marginTop != "481px") {
+                                console.log(1);
+                                document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
 
-                            
-                            setTimeout(() => {
-                                document.getElementById("fire1").style.marginLeft = "360px";
+                                
+                                setTimeout(() => {
+                                    document.getElementById("fire1").style.marginLeft = "360px";
 
 
-                                document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
 
-                                document.getElementById("fire1").style.marginTop = "481px";
-                                document.getElementById("fire2").style.marginTop = "481px";
-                                document.getElementById("fire3").style.marginTop = "481px";
-                                document.getElementById("fire4").style.marginTop = "481px";
-                                document.getElementById("fire5").style.marginTop = "481px";
+                                    document.getElementById("fire1").style.marginTop = "481px";
+                                    document.getElementById("fire2").style.marginTop = "481px";
+                                    document.getElementById("fire3").style.marginTop = "481px";
+                                    document.getElementById("fire4").style.marginTop = "481px";
+                                    document.getElementById("fire5").style.marginTop = "481px";
+                                    
+                                    this.BOSS_DEATH_FLAG2 = true;
+                                    this.BUTTONLVL3_RIGHT = false;
+                                    setTimeout(() => {
+                                        if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
+                                            // console.log(21222222)
+                                            document.getElementById("main-boss").style.display = "none"
+                                        }
+                                    }, 2000)
+                                }, 2000)
 
-                                this.BUTTONLVL3_RIGHT = false;
-                            }, 2000)
+                                document.getElementById("fire1").style.marginTop = "1081px";
+                                document.getElementById("fire2").style.marginTop = "1081px";
+                                document.getElementById("fire3").style.marginTop = "1081px";
+                                document.getElementById("fire4").style.marginTop = "1081px";
+                                document.getElementById("fire5").style.marginTop = "1081px";
 
-                            document.getElementById("fire1").style.marginTop = "1081px";
-                            document.getElementById("fire2").style.marginTop = "1081px";
-                            document.getElementById("fire3").style.marginTop = "1081px";
-                            document.getElementById("fire4").style.marginTop = "1081px";
-                            document.getElementById("fire5").style.marginTop = "1081px";
-
-                            document.getElementById("fire1").style.marginTop = "505px";
-                            document.getElementById("fire2").style.marginTop = "505px";
-                            document.getElementById("fire3").style.marginTop = "505px";
-                            document.getElementById("fire4").style.marginTop = "505px";
-                            document.getElementById("fire5").style.marginTop = "505px";
-
+                                document.getElementById("fire1").style.marginTop = "505px";
+                                document.getElementById("fire2").style.marginTop = "505px";
+                                document.getElementById("fire3").style.marginTop = "505px";
+                                document.getElementById("fire4").style.marginTop = "505px";
+                                document.getElementById("fire5").style.marginTop = "505px";
+                            };
                         };
+                    //
+                    } else if (elem.IMG_PATH.includes("boss_box")) {
+                        return "death";
+                    
+                    } else if (elem.IMG_PATH.includes("E_clue")){
+                        
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -180,6 +197,7 @@ class Rect {
                     
                     } else if (elem.IMG_PATH.includes("buttonlvl3")) {
                         if (key == "KeyE"){
+                            this.BOSS_DEATH_FLAG1 = true;
                             return "pressbuttonlvl3";
                         };
                     //
@@ -189,46 +207,60 @@ class Rect {
                         elem.ELEMENT.style.top = "165px";
                         this.BUTTONLVL3_RIGHT = true;
                         if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
-                            console.log(1);
-                            document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
-                            document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
-
+                            if (document.getElementById("fire1").style.marginTop != "481px") {
+                                console.log(1);
+                                document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
+                                document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
+                                
+                                
+                                setTimeout(() => {
+                                    document.getElementById("fire1").style.marginLeft = "360px";
+                                
+                                
+                                    document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
+                                    document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
+                                
+                                    document.getElementById("fire1").style.marginTop = "481px";
+                                    document.getElementById("fire2").style.marginTop = "481px";
+                                    document.getElementById("fire3").style.marginTop = "481px";
+                                    document.getElementById("fire4").style.marginTop = "481px";
+                                    document.getElementById("fire5").style.marginTop = "481px";
+                                    
+                                    this.BOSS_DEATH_FLAG2 = true;
+                                    this.BUTTONLVL3_RIGHT = false;
+                                    setTimeout(() => {
+                                        if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
+                                            // console.log(21222222)
+                                            document.getElementById("main-boss").style.display = "none"
+                                        }
+                                    }, 2000)
+                                }, 2000)
                             
-                            setTimeout(() => {
-                                document.getElementById("fire1").style.marginLeft = "360px";
-
-
-                                document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
-                                document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
-
-                                document.getElementById("fire1").style.marginTop = "481px";
-                                document.getElementById("fire2").style.marginTop = "481px";
-                                document.getElementById("fire3").style.marginTop = "481px";
-                                document.getElementById("fire4").style.marginTop = "481px";
-                                document.getElementById("fire5").style.marginTop = "481px";
-
-                                this.BUTTONLVL3_RIGHT = false;
-                            }, 2000)
-
-                            document.getElementById("fire1").style.marginTop = "1081px";
-                            document.getElementById("fire2").style.marginTop = "1081px";
-                            document.getElementById("fire3").style.marginTop = "1081px";
-                            document.getElementById("fire4").style.marginTop = "1081px";
-                            document.getElementById("fire5").style.marginTop = "1081px";
-
-                            document.getElementById("fire1").style.marginTop = "505px";
-                            document.getElementById("fire2").style.marginTop = "505px";
-                            document.getElementById("fire3").style.marginTop = "505px";
-                            document.getElementById("fire4").style.marginTop = "505px";
-                            document.getElementById("fire5").style.marginTop = "505px";
+                                document.getElementById("fire1").style.marginTop = "1081px";
+                                document.getElementById("fire2").style.marginTop = "1081px";
+                                document.getElementById("fire3").style.marginTop = "1081px";
+                                document.getElementById("fire4").style.marginTop = "1081px";
+                                document.getElementById("fire5").style.marginTop = "1081px";
+                            
+                                document.getElementById("fire1").style.marginTop = "505px";
+                                document.getElementById("fire2").style.marginTop = "505px";
+                                document.getElementById("fire3").style.marginTop = "505px";
+                                document.getElementById("fire4").style.marginTop = "505px";
+                                document.getElementById("fire5").style.marginTop = "505px";
+                            };
     
                         };
+                    // 
+                    } else if (elem.IMG_PATH.includes("boss_box")) {
+                        return "death";
+                    } else if (elem.IMG_PATH.includes("E_clue")){
+                        
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -272,6 +304,11 @@ class Rect {
                         
                     } else if (elem.IMG_PATH.includes("secret_door")) {
                     
+                    //
+                    } else if (elem.IMG_PATH.includes("boss_box")) {
+                        return "death";
+                    } else if (elem.IMG_PATH.includes("E_clue")){
+                        
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -315,6 +352,10 @@ class Rect {
                        
                     } else if (elem.IMG_PATH.includes("secret_door")) {
                     
+                    } else if (elem.IMG_PATH.includes("boss_box")) {
+                        return "death";
+                    } else if (elem.IMG_PATH.includes("E_clue")){
+                        
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";

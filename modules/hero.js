@@ -207,6 +207,7 @@ class Hero extends Sprite {
         };
 
         if (collisionLeft == "pressbuttonlvl3" || collisionRight == "pressbuttonlvl3") {
+            
             document.getElementById("arrowlvl3").style.animation = "arrowRightMove 1s ease-out";
         };
 

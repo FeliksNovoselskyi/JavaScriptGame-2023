@@ -632,3 +632,13 @@ body {
     }
 }
 
+#main-boss {
+    margin-top: 432px;
+    margin-left: 460px;
+    position: absolute;
+}
+
+#main-bossimg {
+    width: 100px;
+    height: 100px;
+}
