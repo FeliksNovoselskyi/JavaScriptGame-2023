@@ -15,21 +15,31 @@ function createMap(listMap) {
                 let block = new Sprite(
                     x, y,
                     41, 41,
-                    "../images/block.png",
+                    "../images/rock_block.png",
                     undefined,
                     "img"
                 )
                 listElem.push(block)
 
             } else if (cell == "2") {
-                let wholeBlock = new Sprite(
+                let block1 = new Sprite(
                     x, y,
                     41, 41,
-                    "../images/whole_block.png",
+                    "../images/block.png",
                     undefined,
                     "img"
                 )
-                listElem.push(wholeBlock)
+                listElem.push(block1)
+
+            } else if (cell == "4") {
+                let block2 = new Sprite(
+                    x, y,
+                    41, 41,
+                    "../images/block2.png",
+                    undefined,
+                    "img"
+                )
+                listElem.push(block2)
 
             } else if (cell == "h") {
                 hero = new Hero(
@@ -156,9 +166,38 @@ function createMap(listMap) {
                     "img"
                 );
                 listElem.push(corner); // коптерка
+            } else if (cell == "9") {
+                let startDoor = new Sprite(
+                    x, y,
+                    41,82,
+                    "../images/entrance.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(startDoor); // коптерка
+            } else if (cell == "x") {
+                let eRight = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/E_clue_right.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(eRight); // коптерка
+            } else if (cell == "s") {
+                let spikes = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/spikes.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(spikes); // коптерка
             } 
         
         
+        
+
             x += 41
 
         }

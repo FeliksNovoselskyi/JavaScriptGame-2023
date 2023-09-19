@@ -556,6 +556,7 @@ body {
     position: fixed;
     left: 51px;
     top: -20px;
+    user-select: none;
 }
 
 #fire1 {
@@ -617,7 +618,7 @@ body {
 
 
 #arrowlvl3 {
-    margin-top: 475px;
+    margin-top: 485px;
     margin-left: -855px;
     position: absolute;
     animation: none;
@@ -633,7 +634,7 @@ body {
 }
 
 #main-boss {
-    margin-top: 432px;
+    margin-top: 442px;
     margin-left: 460px;
     position: absolute;
 }

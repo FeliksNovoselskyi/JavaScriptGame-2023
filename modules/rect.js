@@ -82,6 +82,7 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("seller") && key == "KeyE" && parseInt(score.textContent) == 3) {
                         this.OPEN_DOOR_FLAG = true;
                         this.LEVEL2_FLAG = true;
+                        document.getElementById("counter").textContent = 0;
                     //
                     } else if (elem.IMG_PATH.includes("secret_door")) {
                         elem.ELEMENT.src = "./images/buttonlvl3_right.png";
@@ -119,9 +120,11 @@ class Rect {
                                     setTimeout(() => {
                                         if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
                                             // console.log(21222222)
-                                            document.getElementById("main-boss").style.display = "none"
+                                            this.MAIN_BOSS_IMG = document.querySelector("#main-bossimg");
+
+                                            this.MAIN_BOSS_IMG.src = "./images/boss_die.png";
                                         }
-                                    }, 2000)
+                                    }, 3000)
                                 }, 2000)
 
                                 document.getElementById("fire1").style.marginTop = "1081px";
@@ -141,8 +144,12 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("boss_box")) {
                         return "death";
                     
-                    } else if (elem.IMG_PATH.includes("E_clue")){
+                    } else if (elem.IMG_PATH.includes("E_clue")) {
                         
+                    } else if (elem.IMG_PATH.includes("E_clue_right")) {
+                        
+                    } else if (elem.IMG_PATH.includes("spikes")) {
+                        return "death";
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -237,9 +244,11 @@ class Rect {
                                     setTimeout(() => {
                                         if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
                                             // console.log(21222222)
-                                            document.getElementById("main-boss").style.display = "none"
+                                            this.MAIN_BOSS_IMG = document.querySelector("#main-bossimg");
+
+                                            this.MAIN_BOSS_IMG.src = "./images/boss_die.png";
                                         }
-                                    }, 2000)
+                                    }, 3000)
                                 }, 2000)
                             
                                 document.getElementById("fire1").style.marginTop = "1081px";
@@ -259,8 +268,12 @@ class Rect {
                     // 
                     } else if (elem.IMG_PATH.includes("boss_box")) {
                         return "death";
-                    } else if (elem.IMG_PATH.includes("E_clue")){
+                    } else if (elem.IMG_PATH.includes("E_clue")) {
                         
+                    } else if (elem.IMG_PATH.includes("E_clue_right")) {
+                        
+                    } else if (elem.IMG_PATH.includes("spikes")) {
+                        return "death";
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -309,6 +322,10 @@ class Rect {
                         return "death";
                     } else if (elem.IMG_PATH.includes("E_clue")){
                         
+                    } else if (elem.IMG_PATH.includes("E_clue_right")){
+                        
+                    } else if (elem.IMG_PATH.includes("spikes")) {
+                        return "death";
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
@@ -354,8 +371,12 @@ class Rect {
                     
                     } else if (elem.IMG_PATH.includes("boss_box")) {
                         return "death";
-                    } else if (elem.IMG_PATH.includes("E_clue")){
+                    } else if (elem.IMG_PATH.includes("E_clue")) {
                         
+                    } else if (elem.IMG_PATH.includes("E_clue_right")) {
+                        
+                    } else if (elem.IMG_PATH.includes("spikes")) {
+                        return "death";
                     // Условия попадания в огонь и возвращения значения смерти
                     } else if (elem.IMG_PATH.includes("fire_box")) {
                         return "death";
