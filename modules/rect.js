@@ -47,6 +47,8 @@ class Rect {
                         elem.ELEMENT.remove();
                         // Убираем пулю первого NPS
                         document.getElementById("bullet1").style.display = "none";
+                        document.getElementById("bullet1").style.animation = "none";
+                        document.getElementById("bullet1").style.left = "0px";
                         this.NPS1_DEATH_FLAG = true;
 
                     // Условие убийства второго NPS (NPS с правой стороны)
@@ -54,6 +56,8 @@ class Rect {
                         elem.ELEMENT.remove();
                         // Убираем пулю второго NPS
                         document.getElementById("bullet2").style.display = "none";
+                        document.getElementById("bullet2").style.animation = "none";
+                        document.getElementById("bullet2").style.left = "0px";
                         this.NPS2_DEATH_FLAG = true;
 
                     // Условие освобождения пленника,
@@ -91,59 +95,91 @@ class Rect {
                         this.BUTTONLVL3_RIGHT = true;
                         if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
                             if (document.getElementById("fire1").style.marginTop != "481px") {
-                                console.log(1);
-                                document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
+                                this.BOSS_DEATH_FLAG2 = true;
+                                if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
+                                    console.log(1);
+                                    document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
 
-                                
-                                setTimeout(() => {
-                                    document.getElementById("fire1").style.marginLeft = "360px";
-
-
-                                    document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
-
-                                    document.getElementById("fire1").style.marginTop = "481px";
-                                    document.getElementById("fire2").style.marginTop = "481px";
-                                    document.getElementById("fire3").style.marginTop = "481px";
-                                    document.getElementById("fire4").style.marginTop = "481px";
-                                    document.getElementById("fire5").style.marginTop = "481px";
                                     
-                                    this.BOSS_DEATH_FLAG2 = true;
-                                    this.BUTTONLVL3_RIGHT = false;
                                     setTimeout(() => {
-                                        if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
+                                        document.getElementById("fire1").style.marginLeft = "360px";
+
+
+                                        document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
+
+                                        document.getElementById("fire1").style.marginTop = "481px";
+                                        document.getElementById("fire2").style.marginTop = "481px";
+                                        document.getElementById("fire3").style.marginTop = "481px";
+                                        document.getElementById("fire4").style.marginTop = "481px";
+                                        document.getElementById("fire5").style.marginTop = "481px";
+
+                                        this.BUTTONLVL3_RIGHT = false;
+                                        setTimeout(() => {
                                             // console.log(21222222)
                                             this.MAIN_BOSS_IMG = document.querySelector("#main-bossimg");
 
                                             this.MAIN_BOSS_IMG.src = "./images/boss_die.png";
-                                        }
-                                    }, 3000)
-                                }, 2000)
 
-                                document.getElementById("fire1").style.marginTop = "1081px";
-                                document.getElementById("fire2").style.marginTop = "1081px";
-                                document.getElementById("fire3").style.marginTop = "1081px";
-                                document.getElementById("fire4").style.marginTop = "1081px";
-                                document.getElementById("fire5").style.marginTop = "1081px";
+                                            document.getElementById("p_story").textContent = `
+                                            Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
+                                            і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
+                                            і на останньому поверсі вам доведеться битися з могутнім обличчям, здолавши якого ви зможете повернуться. у свій світ
+                                            У героя є хп бар 10 сердець, після отримання втрат віднімається 1 серця, якщо сердечок (0% хп) немає герой вмирає.
 
-                                document.getElementById("fire1").style.marginTop = "505px";
-                                document.getElementById("fire2").style.marginTop = "505px";
-                                document.getElementById("fire3").style.marginTop = "505px";
-                                document.getElementById("fire4").style.marginTop = "505px";
-                                document.getElementById("fire5").style.marginTop = "505px";
+                                            ...........................................
+                                            Поверх 1 (полонений)
+                                            На другому поверсі 2 скелета (оскільки лич за фактом скелет ) противника захищають бранця, цих противників треба вбити і після їх вбивства
+                                            Звільнити бранця (він пов'язаний)
+                                            За що той нам дасть ключ від дверей, що ведуть на лісницю 2 поверх.
+
+                                            .......................................................
+                                            2 поверх (платформер джампер)
+                                            Підлоги немає, є тільки дощечки по яких треба дострибати до магазину попутно отримуючи монетки, 
+                                            всього їх на поверсі 3, 
+                                            за монетки можна купити шпильки(1 монета одна шпилька) 
+                                            після покупки шпильок ми зможуть відчиняться двері на наступний рівень.
+                                            
+                                            .......................................................
+                                            3 поверх (бос)
+                                            Ви піднялися до 3 поверху, останнього поверху, ви побачили Ліча, 
+                                            ви почали стрибати по платформах нагору щоб натиснути кнопку яка випустити стрілу по Личу знизу, 
+                                            що завдяки своїм розмірам не може піднятися до верху,
+                                            але стріла випускається лише 1 раз тому ви шукаєте іншу можливість вбити на самій вершині в одному з кутів потаємні двері які відчиняються без ключа, 
+                                            там знаходиться кнопка після натискання котрої знизу починається вогонь, від якого Ліч вмирає.`;
+
+                                        }, 3000);
+                                    }, 2000);
+
+                                    document.getElementById("fire1").style.marginTop = "1081px";
+                                    document.getElementById("fire2").style.marginTop = "1081px";
+                                    document.getElementById("fire3").style.marginTop = "1081px";
+                                    document.getElementById("fire4").style.marginTop = "1081px";
+                                    document.getElementById("fire5").style.marginTop = "1081px";
+
+                                    document.getElementById("fire1").style.marginTop = "505px";
+                                    document.getElementById("fire2").style.marginTop = "505px";
+                                    document.getElementById("fire3").style.marginTop = "505px";
+                                    document.getElementById("fire4").style.marginTop = "505px";
+                                    document.getElementById("fire5").style.marginTop = "505px";
+                                };
                             };
                         };
                     //
+                    } else if (elem.IMG_PATH.includes("buttonlvl3")) {
+                        if (key == "KeyE"){
+                            this.BOSS_DEATH_FLAG1 = true;
+                            return "pressbuttonlvl3";
+                        };
                     } else if (elem.IMG_PATH.includes("boss_box")) {
                         return "death";
-                    
                     } else if (elem.IMG_PATH.includes("E_clue")) {
                         
                     } else if (elem.IMG_PATH.includes("E_clue_right")) {
@@ -172,18 +208,34 @@ class Rect {
                     if (elem.IMG_PATH.includes("nps1") && key == "KeyE") {
                         elem.ELEMENT.remove();
                         document.getElementById("bullet1").style.display = "none";
+                        document.getElementById("bullet1").style.animation = "none";
+                        document.getElementById("bullet1").style.left = "0px";
                         this.NPS1_DEATH_FLAG = true;
 
                     // Условие убийства второго NPS (NPS с правой стороны)
                     } else if (elem.IMG_PATH.includes("nps2") && key == "KeyE") {
                         elem.ELEMENT.remove();
                         document.getElementById("bullet2").style.display = "none";
+                        document.getElementById("bullet2").style.animation = "none";
+                        document.getElementById("bullet2").style.left = "0px";
                         this.NPS2_DEATH_FLAG = true;
                     
                     // Условия открытия двери на 2-ой уровень при условии если
                     // двое NPS убиты а пленник освобождён
                     } else if (elem.IMG_PATH.includes("door1") && this.OPEN_DOOR_FLAG && this.NPS1_DEATH_FLAG && this.NPS2_DEATH_FLAG) {
                         elem.ELEMENT.remove();
+
+                        document.getElementById("p_story").textContent = `Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
+                        і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
+                        і на останньому поверсі вам доведеться битися з могутнім обличчям, здолавши якого ви зможете повернуться. у свій світ
+                        У героя є хп бар 10 сердець, після отримання втрат віднімається 1 серця, якщо сердечок (0% хп) немає герой вмирає.
+                        
+                        ...........................................
+                        Поверх 1 (полонений)
+                        На другому поверсі 2 скелета (оскільки лич за фактом скелет ) противника захищають бранця, цих противників треба вбити і після їх вбивства
+                        Звільнити бранця (він пов'язаний)
+                        За що той нам дасть ключ від дверей, що ведуть на лісницю 2 поверх.`;
+
                         this.OPEN_DOOR_FLAG = false;
 
                     // Условие взятия монет и прибавления к счётчику 1-ы
@@ -199,6 +251,25 @@ class Rect {
                     //
                     } else if (elem.IMG_PATH.includes("door2") && this.OPEN_DOOR_FLAG) {
                         elem.ELEMENT.remove();
+
+                        document.getElementById("p_story").textContent = `Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
+                        і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
+                        і на останньому поверсі вам доведеться битися з могутнім обличчям, здолавши якого ви зможете повернуться. у свій світ
+                        У героя є хп бар 10 сердець, після отримання втрат віднімається 1 серця, якщо сердечок (0% хп) немає герой вмирає.
+                        
+                        ...........................................
+                        Поверх 1 (полонений)
+                        На другому поверсі 2 скелета (оскільки лич за фактом скелет ) противника захищають бранця, цих противників треба вбити і після їх вбивства
+                        Звільнити бранця (він пов'язаний)
+                        За що той нам дасть ключ від дверей, що ведуть на лісницю 2 поверх.
+                        
+                        .......................................................
+                        2 поверх (платформер джампер)
+                        Підлоги немає, є тільки дощечки по яких треба дострибати до магазину попутно отримуючи монетки, 
+                        всього їх на поверсі 3, 
+                        за монетки можна купити шпильки(1 монета одна шпилька) 
+                        після покупки шпильок ми зможуть відчиняться двері на наступний рівень.`;
+
                         this.OPEN_DOOR_FLAG = false;
                     
                     
@@ -215,57 +286,91 @@ class Rect {
                         this.BUTTONLVL3_RIGHT = true;
                         if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
                             if (document.getElementById("fire1").style.marginTop != "481px") {
-                                console.log(1);
-                                document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
-                                document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
-                                
-                                
-                                setTimeout(() => {
-                                    document.getElementById("fire1").style.marginLeft = "360px";
-                                
-                                
-                                    document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
-                                    document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
-                                
-                                    document.getElementById("fire1").style.marginTop = "481px";
-                                    document.getElementById("fire2").style.marginTop = "481px";
-                                    document.getElementById("fire3").style.marginTop = "481px";
-                                    document.getElementById("fire4").style.marginTop = "481px";
-                                    document.getElementById("fire5").style.marginTop = "481px";
+                                this.BOSS_DEATH_FLAG2 = true;
+                                if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
+                                    console.log(1);
+                                    document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire4").style.animation = "fireGoDown 2s ease-out";
+                                    document.getElementById("fire5").style.animation = "fireGoDown 2s ease-out";
                                     
-                                    this.BOSS_DEATH_FLAG2 = true;
-                                    this.BUTTONLVL3_RIGHT = false;
+                                    
                                     setTimeout(() => {
-                                        if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
+                                        document.getElementById("fire1").style.marginLeft = "360px";
+                                    
+                                    
+                                        document.getElementById("fire1").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire2").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire3").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire4").style.animation = "fireGoUp 2s ease-out";
+                                        document.getElementById("fire5").style.animation = "fireGoUp 2s ease-out";
+                                    
+                                        document.getElementById("fire1").style.marginTop = "481px";
+                                        document.getElementById("fire2").style.marginTop = "481px";
+                                        document.getElementById("fire3").style.marginTop = "481px";
+                                        document.getElementById("fire4").style.marginTop = "481px";
+                                        document.getElementById("fire5").style.marginTop = "481px";
+
+                                        this.BUTTONLVL3_RIGHT = false;
+                                        setTimeout(() => {
                                             // console.log(21222222)
                                             this.MAIN_BOSS_IMG = document.querySelector("#main-bossimg");
 
                                             this.MAIN_BOSS_IMG.src = "./images/boss_die.png";
-                                        }
-                                    }, 3000)
-                                }, 2000)
-                            
-                                document.getElementById("fire1").style.marginTop = "1081px";
-                                document.getElementById("fire2").style.marginTop = "1081px";
-                                document.getElementById("fire3").style.marginTop = "1081px";
-                                document.getElementById("fire4").style.marginTop = "1081px";
-                                document.getElementById("fire5").style.marginTop = "1081px";
-                            
-                                document.getElementById("fire1").style.marginTop = "505px";
-                                document.getElementById("fire2").style.marginTop = "505px";
-                                document.getElementById("fire3").style.marginTop = "505px";
-                                document.getElementById("fire4").style.marginTop = "505px";
-                                document.getElementById("fire5").style.marginTop = "505px";
+
+                                            document.getElementById("p_story").textContent = `
+                                            Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
+                                            і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
+                                            і на останньому поверсі вам доведеться битися з могутнім обличчям, здолавши якого ви зможете повернуться. у свій світ
+                                            У героя є хп бар 10 сердець, після отримання втрат віднімається 1 серця, якщо сердечок (0% хп) немає герой вмирає.
+
+                                            ...........................................
+                                            Поверх 1 (полонений)
+                                            На другому поверсі 2 скелета (оскільки лич за фактом скелет ) противника захищають бранця, цих противників треба вбити і після їх вбивства
+                                            Звільнити бранця (він пов'язаний)
+                                            За що той нам дасть ключ від дверей, що ведуть на лісницю 2 поверх.
+
+                                            .......................................................
+                                            2 поверх (платформер джампер)
+                                            Підлоги немає, є тільки дощечки по яких треба дострибати до магазину попутно отримуючи монетки, 
+                                            всього їх на поверсі 3, 
+                                            за монетки можна купити шпильки(1 монета одна шпилька) 
+                                            після покупки шпильок ми зможуть відчиняться двері на наступний рівень.
+                                            
+                                            .......................................................
+                                            3 поверх (бос)
+                                            Ви піднялися до 3 поверху, останнього поверху, ви побачили Ліча, 
+                                            ви почали стрибати по платформах нагору щоб натиснути кнопку яка випустити стрілу по Личу знизу, 
+                                            що завдяки своїм розмірам не може піднятися до верху, але й з часом втрачаєте здоров'я, 
+                                            тому вам потрібно перемогти Ліча швидше ніж ви помрете, 
+                                            але стріла випускається лише 1 раз тому ви шукаєте іншу можливість вбити на самій вершині в одному з кутів потаємні двері які відчиняються без ключа, 
+                                            там знаходиться кнопка після натискання котрої знизу починається вогонь, від якого Ліч вмирає.`;
+
+                                        }, 3000);
+                                    }, 2000);
+                                
+                                    document.getElementById("fire1").style.marginTop = "1081px";
+                                    document.getElementById("fire2").style.marginTop = "1081px";
+                                    document.getElementById("fire3").style.marginTop = "1081px";
+                                    document.getElementById("fire4").style.marginTop = "1081px";
+                                    document.getElementById("fire5").style.marginTop = "1081px";
+                                
+                                    document.getElementById("fire1").style.marginTop = "505px";
+                                    document.getElementById("fire2").style.marginTop = "505px";
+                                    document.getElementById("fire3").style.marginTop = "505px";
+                                    document.getElementById("fire4").style.marginTop = "505px";
+                                    document.getElementById("fire5").style.marginTop = "505px";
+                                };
                             };
     
                         };
                     // 
+                    } else if (elem.IMG_PATH.includes("buttonlvl3")) {
+                        if (key == "KeyE"){
+                            this.BOSS_DEATH_FLAG1 = true;
+                            return "pressbuttonlvl3";
+                        };
                     } else if (elem.IMG_PATH.includes("boss_box")) {
                         return "death";
                     } else if (elem.IMG_PATH.includes("E_clue")) {
@@ -295,12 +400,16 @@ class Rect {
                     if (elem.IMG_PATH.includes("nps1")) {
                         elem.ELEMENT.remove();
                         document.getElementById("bullet1").style.display = "none";
+                        document.getElementById("bullet1").style.animation = "none";
+                        document.getElementById("bullet1").style.left = "0px";
                         this.NPS1_DEATH_FLAG = true;
 
                     // Условие убийства второго NPS (NPS с правой стороны)
                     } else if (elem.IMG_PATH.includes("nps2")) {
                         elem.ELEMENT.remove();
                         document.getElementById("bullet2").style.display = "none";
+                        document.getElementById("bullet2").style.animation = "none";
+                        document.getElementById("bullet2").style.left = "0px";
                         this.NPS2_DEATH_FLAG = true;
 
                     // Условие взятия монет и прибавления к счётчику 1-ы
@@ -347,12 +456,16 @@ class Rect {
                     if (elem.IMG_PATH.includes("nps1")) {
                         elem.ELEMENT.remove();
                         document.getElementById("bullet1").style.display = "none";
+                        document.getElementById("bullet1").style.animation = "none";
+                        document.getElementById("bullet1").style.left = "0px";
                         this.NPS1_DEATH_FLAG = true;
 
                     // Условие убийства второго NPS (NPS с правой стороны)
                     } else if (elem.IMG_PATH.includes("nps2")) {
                         elem.ELEMENT.remove();
                         document.getElementById("bullet2").style.display = "none";
+                        document.getElementById("bullet2").style.animation = "none";
+                        document.getElementById("bullet2").style.left = "0px";
                         this.NPS2_DEATH_FLAG = true;
 
                     // Условие взятия монет и прибавления к счётчику 1-ы

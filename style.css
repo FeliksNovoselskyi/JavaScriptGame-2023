@@ -506,6 +506,8 @@ body {
     margin: auto;
     background-color: transparent;
     border-color: transparent;
+    margin-left: 1215px;
+    position: fixed;
 }
 
 #bullet1 {
@@ -618,7 +620,7 @@ body {
 
 
 #arrowlvl3 {
-    margin-top: 485px;
+    margin-top: 488px;
     margin-left: -855px;
     position: absolute;
     animation: none;
@@ -642,4 +644,17 @@ body {
 #main-bossimg {
     width: 100px;
     height: 100px;
+}
+
+#story {
+    width: 500px;
+    margin-left: 1200px;
+    position: fixed;
+    margin-top: 50px;
+}
+
+#p_story {
+   color: white; 
+   font-size: 15px;
+   user-select: none;
 }

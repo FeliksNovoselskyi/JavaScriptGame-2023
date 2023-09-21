@@ -193,6 +193,24 @@ function createMap(listMap) {
                     "img"
                 );
                 listElem.push(spikes); // коптерка
+            } else if (cell == "q") {
+                let halfBlock = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/half_block.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(halfBlock); // коптерка
+            } else if (cell == "~") {
+                let wholeBlock = new Sprite(
+                    x, y,
+                    41,41,
+                    "../images/whole_block.png",
+                    undefined,
+                    "img"
+                );
+                listElem.push(wholeBlock); // коптерка
             } 
         
         
