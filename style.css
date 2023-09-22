@@ -403,6 +403,25 @@ body {
 .tablinks:hover {
     background-color: #b8b7b7;
     cursor: pointer;
+    animation: tablinksHover 0.75s ease-out;
+}
+
+@keyframes tablinksHover{
+    0%{
+        width: 170px;
+    }
+    50%{
+        width: 300px;
+    }
+    100%{
+        width: 170px;
+    }
+}
+
+.modal-windows-paragraphs {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    user-select: none;
 }
 
 
@@ -414,6 +433,23 @@ body {
     margin-top: 10px;
     font-family:'IBM Plex Mono', monospace;
     font-size: 20px;
+    padding: 10px 20px;
+}
+
+#signup:hover {
+    animation: signupHover 0.75s ease-out;
+}
+
+@keyframes signupHover{
+    0%{
+        width: 200px;
+    }
+    50%{
+        width: 350px;
+    }
+    100%{
+        width: 200px;
+    }
 }
 
 #signin {
@@ -424,6 +460,23 @@ body {
     margin-top: 10px;
     font-family:'IBM Plex Mono', monospace;
     font-size: 20px;
+    padding: 10px 20px;
+}
+
+#signin:hover {
+    animation: signinHover 0.75s ease-out;
+}
+
+@keyframes signinHover{
+    0%{
+        width: 200px;
+    }
+    50%{
+        width: 300px;
+    }
+    100%{
+        width: 200px;
+    }
 }
 
 #p1signup {
@@ -556,9 +609,11 @@ body {
     font-family: 'Press Start 2P', cursive;
     color: #c30d0d;
     position: fixed;
-    left: 51px;
+    left: 91px;
     top: -20px;
     user-select: none;
+    display: none;
+    z-index: 1;
 }
 
 #fire1 {
@@ -657,4 +712,179 @@ body {
    color: white; 
    font-size: 15px;
    user-select: none;
+}
+
+#coin-counter-image {
+    margin-top: -66px;
+    margin-left: -1810px;
+    display: none;
+    z-index: 1;
+}
+
+#coin-counter-image-img {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    z-index: 1;
+}
+
+
+#hairpin-counter-image {
+    margin-top: -66px;
+    margin-left: -1610px;
+    display: none;
+    z-index: 1;
+}
+
+#hairpin-counter-image-img {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    z-index: 1;
+}
+
+#hairpin-counter {
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    color: #c30d0d;
+    position: fixed;
+    left: 191px;
+    top: -20px;
+    user-select: none;
+    display: none;
+    z-index: 1;
+}
+
+#modal-window-1 {
+    width: 400px;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    border-width: 0px;
+    border-radius: 16px;
+    background-color: #f2eeee;
+}
+
+#button-x-modal-window-1 {
+    margin-right: -95%;
+    margin-top: 0%;
+    border-color: #d9d8d8;
+    background-color: #d9d8d8;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+    border-width: 0px;
+    user-select: none;
+}
+
+#button-x-modal-window-1:hover {
+    border-color: #bdbcbc;
+    background-color: #bdbcbc;
+}
+
+#modal-window-2 {
+    width: 400px;
+    height: 120px;
+    position: fixed;
+    z-index: 1;
+    border-width: 0px;
+    border-radius: 16px;
+    background-color: #f2eeee;
+    display: none;
+}
+
+#button-x-modal-window-2 {
+    margin-right: -95%;
+    margin-top: 0%;
+    border-color: #d9d8d8;
+    background-color: #d9d8d8;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+    border-width: 0px;
+    user-select: none;
+}
+
+#button-x-modal-window-2:hover {
+    border-color: #bdbcbc;
+    background-color: #bdbcbc;
+}
+
+#modal-window-3 {
+    width: 400px;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    border-width: 0px;
+    border-radius: 16px;
+    background-color: #f2eeee;
+    display: none;
+}
+
+#button-x-modal-window-3 {
+    margin-right: -95%;
+    margin-top: 0%;
+    border-color: #d9d8d8;
+    background-color: #d9d8d8;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+    border-width: 0px;
+    user-select: none;
+}
+
+#button-x-modal-window-3:hover {
+    border-color: #bdbcbc;
+    background-color: #bdbcbc;
+}
+
+#modal-window-4 {
+    width: 400px;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    border-width: 0px;
+    border-radius: 16px;
+    background-color: #f2eeee;
+    display: none;
+}
+
+#button-x-modal-window-4 {
+    margin-right: -95%;
+    margin-top: 0%;
+    border-color: #d9d8d8;
+    background-color: #d9d8d8;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+    border-width: 0px;
+    user-select: none;
+}
+
+#button-x-modal-window-4:hover {
+    border-color: #bdbcbc;
+    background-color: #bdbcbc;
+}
+
+#modal-window-5 {
+    width: 400px;
+    height: 220px;
+    position: fixed;
+    z-index: 1;
+    border-width: 0px;
+    border-radius: 16px;
+    background-color: #f2eeee;
+    display: none;
+}
+
+#button-x-modal-window-5 {
+    margin-right: -95%;
+    margin-top: 0%;
+    border-color: #d9d8d8;
+    background-color: #d9d8d8;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+    border-width: 0px;
+    user-select: none;
+}
+
+#button-x-modal-window-5:hover {
+    border-color: #bdbcbc;
+    background-color: #bdbcbc;
 }

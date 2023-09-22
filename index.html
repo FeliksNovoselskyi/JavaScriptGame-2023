@@ -56,7 +56,7 @@
     
         <div id = "tab3" class = "tabcontent">
             <p id = "p1game">Игра</p>
-            <p>d</p>
+            <p>.</p>
             <div id = "bullet1"></div>
             <div id = "bullet2"></div>
             <p id = "counter">0</p>
@@ -77,6 +77,42 @@
             </p></div>
             
             <div id = "hpbar"><img id="hpbarimg" src="./images/hp/10.png" alt="health point bar"></div>
+            
+            <div id="coin-counter-image"><img id="coin-counter-image-img" src="./images/coin.png" alt="coin image counter"></div>
+            <div id="hairpin-counter-image"><img id="hairpin-counter-image-img" src="./images/hairpin.png" alt="hairpin image counter"></div>
+            <p id = "hairpin-counter">0</p>
+
+            <dialog id="modal-window-1" open>
+                <button id="button-x-modal-window-1" onclick="document.querySelector('#modal-window-1').close()">X</button>
+                <p class="modal-windows-paragraphs">Ви на першому поверху вежі, вас можуть вбити скелети своїми стрілами, щоб вбити скелетів нажміть біля них Е, також звільніть бранця.</p>
+            </dialog>
+
+            <dialog id="modal-window-2" open>
+                <button id="button-x-modal-window-2">X</button>
+                <p class="modal-windows-paragraphs">Ви на другому поверху вежі, тут немає полу а замість нього вогонь який здатний вас вбити, ви маєте бути обережними. Також збирайте монети щоб пройти далі за сюжетом.</p>
+            </dialog>
+
+            <dialog id="modal-window-3" open>
+                <button id="button-x-modal-window-3">X</button>
+                <p class="modal-windows-paragraphs">Ви зібрали усі монети та купили шпильки у торговця, теперь вам потрібно пійти до дверей.</p>
+            </dialog>
+
+            <dialog id="modal-window-4" open>
+                <button id="button-x-modal-window-4">X</button>
+                <p class="modal-windows-paragraphs">Ви на третьому поверсі вежі, тут ви повинні перемогти боса щоб виграти, шукайте те, як перемогти.</p>
+            </dialog>
+
+            <dialog id="modal-window-5" open>
+                <button id="button-x-modal-window-5">X</button>
+                <p class="modal-windows-paragraphs">Ви перемогли!</p>
+                <p class="modal-windows-paragraphs">Список розробників: 
+                    <br>-Власов Артем</br>
+                    <br>-Булкін Ілля</br>
+                    <br>-Теліус Ярослав</br>
+                    <br>-Новосельський Фелікс (Тім лід).</br></p>
+            </dialog>
+
+            
 
             <!-- <img id="bullet1img" src="./images/bullet.png" alt="bullet1">
             <img id="bullet2img" src="./images/bullet.png" alt="bullet2"> -->

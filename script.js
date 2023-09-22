@@ -13,6 +13,11 @@ let registrationTab = document.getElementById("button1");
 let authorizationTab = document.getElementById("button2");
 let hpBarButton = document.querySelector("#hpbar");
 
+let buttonXModalWindow2 = document.querySelector("#button-x-modal-window-2");
+let buttonXModalWindow3 = document.querySelector("#button-x-modal-window-3");
+let buttonXModalWindow4 = document.querySelector("#button-x-modal-window-4");
+let buttonXModalWindow5 = document.querySelector("#button-x-modal-window-5");
+
 let themeCounter = 0;
 
 let users = {};
@@ -210,6 +215,24 @@ registrationTab.addEventListener("click", (event) => {
 authorizationTab.addEventListener("click", (event) => {
     openTab(event, "tab2");
 });
+
+
+buttonXModalWindow2.addEventListener("click", () => {
+    document.getElementById("modal-window-2").style.display = "none";
+})
+
+buttonXModalWindow3.addEventListener("click", () => {
+    document.getElementById("modal-window-3").style.display = "none";
+})
+
+buttonXModalWindow4.addEventListener("click", () => {
+    document.getElementById("modal-window-4").style.display = "none";
+})
+
+buttonXModalWindow5.addEventListener("click", () => {
+    document.getElementById("modal-window-5").style.display = "none";
+})
+
 
 // Функция открытия вкладки
 function openTab(event, tabName){

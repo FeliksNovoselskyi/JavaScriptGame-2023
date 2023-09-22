@@ -83,10 +83,12 @@ class Rect {
                             return "pressbuttonlvl3";
                         };
                     //
-                    } else if (elem.IMG_PATH.includes("seller") && key == "KeyE" && parseInt(score.textContent) == 3) {
+                    } else if (elem.IMG_PATH.includes("seller") && key == "KeyE") {
                         this.OPEN_DOOR_FLAG = true;
                         this.LEVEL2_FLAG = true;
                         document.getElementById("counter").textContent = 0;
+                        document.getElementById("hairpin-counter").textContent = 3;
+                        document.getElementById("modal-window-3").style.display = "block";
                     //
                     } else if (elem.IMG_PATH.includes("secret_door")) {
                         elem.ELEMENT.src = "./images/buttonlvl3_right.png";
@@ -155,6 +157,7 @@ class Rect {
                                             але стріла випускається лише 1 раз тому ви шукаєте іншу можливість вбити на самій вершині в одному з кутів потаємні двері які відчиняються без ключа, 
                                             там знаходиться кнопка після натискання котрої знизу починається вогонь, від якого Ліч вмирає.`;
 
+                                            document.getElementById("modal-window-5").style.display = "block";
                                         }, 3000);
                                     }, 2000);
 
@@ -225,6 +228,13 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("door1") && this.OPEN_DOOR_FLAG && this.NPS1_DEATH_FLAG && this.NPS2_DEATH_FLAG) {
                         elem.ELEMENT.remove();
 
+                        document.getElementById("modal-window-2").style.display = "block";
+
+                        document.getElementById("coin-counter-image").style.display = "block";
+                        document.getElementById("counter").style.display = "block";
+                        document.getElementById("hairpin-counter-image").style.display = "block";
+                        document.getElementById("hairpin-counter").style.display = "block";
+
                         document.getElementById("p_story").textContent = `Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
                         і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
                         і на останньому поверсі вам доведеться битися з могутнім обличчям, здолавши якого ви зможете повернуться. у свій світ
@@ -251,6 +261,17 @@ class Rect {
                     //
                     } else if (elem.IMG_PATH.includes("door2") && this.OPEN_DOOR_FLAG) {
                         elem.ELEMENT.remove();
+
+                        document.getElementById("modal-window-4").style.display = "block";
+
+                        document.getElementById("hairpin-counter").textContent = 0;
+                        
+                        setTimeout(() => {
+                            document.getElementById("hairpin-counter-image").style.display = "none";
+                            document.getElementById("hairpin-counter").style.display = "none";
+                            document.getElementById("coin-counter-image").style.display = "none";
+                            document.getElementById("counter").style.display = "none";
+                        }, 1000);
 
                         document.getElementById("p_story").textContent = `Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
                         і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
@@ -347,6 +368,7 @@ class Rect {
                                             але стріла випускається лише 1 раз тому ви шукаєте іншу можливість вбити на самій вершині в одному з кутів потаємні двері які відчиняються без ключа, 
                                             там знаходиться кнопка після натискання котрої знизу починається вогонь, від якого Ліч вмирає.`;
 
+                                            document.getElementById("modal-window-5").style.display = "block";
                                         }, 3000);
                                     }, 2000);
                                 
