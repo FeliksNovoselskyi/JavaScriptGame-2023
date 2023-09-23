@@ -16,6 +16,12 @@ class Rect {
         this.BUTTONLVL3_RIGHT = false; //
         this.BOSS_DEATH_FLAG1 = false;
         this.BOSS_DEATH_FLAG2 = false;
+        this.SECRET_DOOR_FLAG = false;
+        
+        this.COIN_SOUND = new Audio("sounds/coin.wav");
+        this.DOOR_OPEN_SOUND = new Audio("sounds/door_open.wav");
+        this.HAIRPINS_BUYING_SOUND = new Audio("sounds/hairpin_buying.wav");
+        this.BOSS_DEATH_SOUND = new Audio("sounds/boss_death.wav");
         
         // 1 = 0
         
@@ -69,6 +75,8 @@ class Rect {
                     // Условие взятия монет и прибавления к счётчику 1-ы
                     } else if (elem.IMG_PATH.includes("coin")) {
                         elem.ELEMENT.remove();
+
+                        this.COIN_SOUND.play();
                         // 1++
 
                         // Получаем сам счётчик из HTML
@@ -84,17 +92,24 @@ class Rect {
                         };
                     //
                     } else if (elem.IMG_PATH.includes("seller") && key == "KeyE") {
-                        this.OPEN_DOOR_FLAG = true;
-                        this.LEVEL2_FLAG = true;
-                        document.getElementById("counter").textContent = 0;
-                        document.getElementById("hairpin-counter").textContent = 3;
-                        document.getElementById("modal-window-3").style.display = "block";
+                        if (document.getElementById("counter").textContent == 3) {
+                            this.OPEN_DOOR_FLAG = true;
+                            this.LEVEL2_FLAG = true;
+                            this.HAIRPINS_BUYING_SOUND.play()
+                            document.getElementById("counter").textContent = 0;
+                            document.getElementById("hairpin-counter").textContent = 3;
+                            document.getElementById("modal-window-3").style.display = "block";
+                        };
                     //
                     } else if (elem.IMG_PATH.includes("secret_door")) {
                         elem.ELEMENT.src = "./images/buttonlvl3_right.png";
                         elem.ELEMENT.style.height = "41px";
                         elem.ELEMENT.style.top = "165px";
                         this.BUTTONLVL3_RIGHT = true;
+                        if (this.SECRET_DOOR_FLAG != true) {
+                            this.DOOR_OPEN_SOUND.play();
+                            this.SECRET_DOOR_FLAG = true;
+                        };
                         if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
                             if (document.getElementById("fire1").style.marginTop != "481px") {
                                 this.BOSS_DEATH_FLAG2 = true;
@@ -158,6 +173,8 @@ class Rect {
                                             там знаходиться кнопка після натискання котрої знизу починається вогонь, від якого Ліч вмирає.`;
 
                                             document.getElementById("modal-window-5").style.display = "block";
+
+                                            this.BOSS_DEATH_SOUND.play();
                                         }, 3000);
                                     }, 2000);
 
@@ -228,6 +245,8 @@ class Rect {
                     } else if (elem.IMG_PATH.includes("door1") && this.OPEN_DOOR_FLAG && this.NPS1_DEATH_FLAG && this.NPS2_DEATH_FLAG) {
                         elem.ELEMENT.remove();
 
+                        this.DOOR_OPEN_SOUND.play();
+
                         document.getElementById("modal-window-2").style.display = "block";
 
                         document.getElementById("coin-counter-image").style.display = "block";
@@ -251,6 +270,8 @@ class Rect {
                     // Условие взятия монет и прибавления к счётчику 1-ы
                     } else if (elem.IMG_PATH.includes("coin")) {
                         elem.ELEMENT.remove();
+
+                        this.COIN_SOUND.play();
                         // 1++
                         
                         // Получаем сам счётчик из HTML
@@ -261,6 +282,8 @@ class Rect {
                     //
                     } else if (elem.IMG_PATH.includes("door2") && this.OPEN_DOOR_FLAG) {
                         elem.ELEMENT.remove();
+
+                        this.DOOR_OPEN_SOUND.play();
 
                         document.getElementById("modal-window-4").style.display = "block";
 
@@ -305,6 +328,10 @@ class Rect {
                         elem.ELEMENT.style.height = "41px";
                         elem.ELEMENT.style.top = "165px";
                         this.BUTTONLVL3_RIGHT = true;
+                        if (this.SECRET_DOOR_FLAG != true) {
+                            this.DOOR_OPEN_SOUND.play();
+                            this.SECRET_DOOR_FLAG = true;
+                        };
                         if (this.BUTTONLVL3_RIGHT && key == "KeyE") {
                             if (document.getElementById("fire1").style.marginTop != "481px") {
                                 this.BOSS_DEATH_FLAG2 = true;
@@ -369,6 +396,8 @@ class Rect {
                                             там знаходиться кнопка після натискання котрої знизу починається вогонь, від якого Ліч вмирає.`;
 
                                             document.getElementById("modal-window-5").style.display = "block";
+
+                                            this.BOSS_DEATH_SOUND.play();
                                         }, 3000);
                                     }, 2000);
                                 
@@ -437,6 +466,8 @@ class Rect {
                     // Условие взятия монет и прибавления к счётчику 1-ы
                     } else if (elem.IMG_PATH.includes("coin")) {
                         elem.ELEMENT.remove();
+
+                        this.COIN_SOUND.play();
                         // 1++
                         
                         // Получаем сам счётчик из HTML
@@ -493,6 +524,8 @@ class Rect {
                     // Условие взятия монет и прибавления к счётчику 1-ы
                     } else if (elem.IMG_PATH.includes("coin")) {
                         elem.ELEMENT.remove();
+
+                        this.COIN_SOUND.play();
                         // 1++
 
                         // Получаем сам счётчик из HTML

@@ -41,6 +41,8 @@ class Hero extends Sprite {
         this.HP_COUNTER = 10;
         // Флаг отвечающий за смерть персонажа от пули
         this.BULLET_HP_FLAG = false;
+
+        this.ARROW_RIGHT_SHOOT_FLAG = false;
     };
 
     // Метод гравитации
@@ -151,6 +153,9 @@ class Hero extends Sprite {
             // Отнимаем от счётчика хп единицу при попадании в огонь
             this.HP_COUNTER -= 1;
 
+            this.HP_MINUS_SOUND = new Audio("sounds/hp_minus.wav")
+            this.HP_MINUS_SOUND.play();
+
             // 9 хп
             if (this.HP_COUNTER == 9) {
                 this.HP_BAR.src = "./images/hp/9.png";
@@ -208,7 +213,14 @@ class Hero extends Sprite {
 
         if (collisionLeft == "pressbuttonlvl3" || collisionRight == "pressbuttonlvl3") {
             
+            if (this.ARROW_RIGHT_SHOOT_FLAG != true){
+                this.ARROW_RIGHT_SHOOT_SOUND = new Audio("sounds/arrowRight_shoot.wav");
+                this.ARROW_RIGHT_SHOOT_SOUND.play();
+                this.ARROW_RIGHT_SHOOT_FLAG = true;
+            };
+
             document.getElementById("arrowlvl3").style.animation = "arrowRightMove 1s ease-out";
+
         };
 
 

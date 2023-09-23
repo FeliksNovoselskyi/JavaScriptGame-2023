@@ -18,6 +18,8 @@ let buttonXModalWindow3 = document.querySelector("#button-x-modal-window-3");
 let buttonXModalWindow4 = document.querySelector("#button-x-modal-window-4");
 let buttonXModalWindow5 = document.querySelector("#button-x-modal-window-5");
 
+let backgroundMusic = new Audio("sounds/background_music.wav");
+
 let themeCounter = 0;
 
 let users = {};
@@ -135,6 +137,11 @@ signInButton.addEventListener("click", () => {
                     document.querySelector("body").style.backgroundAttachment = "fixed";
                     
                     let [listElem, hero] = createMap(listMap);
+
+                    backgroundMusic.loop = true;
+                    backgroundMusic.value = 0.2;
+
+                    backgroundMusic.play();
 
                     function gameLoop(){
                         hero.gravity(listElem); // Вызываем метод который отвечает за гравитацию

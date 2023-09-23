@@ -400,6 +400,7 @@ body {
     font-size: 20px;
     
 }
+
 .tablinks:hover {
     background-color: #b8b7b7;
     cursor: pointer;
@@ -415,6 +416,33 @@ body {
     }
     100%{
         width: 170px;
+    }
+}
+
+#button3 {
+    background-color: #c5c5c5;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border-width: 0px;
+    margin: 5px;
+    align-items: center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 20px;
+}
+
+#button3:hover {
+    animation: button3Hover 0.75s ease-out;
+}
+
+@keyframes button3Hover {
+    0% {
+        width: 51px;
+    }
+    50% {
+        width: 100px;
+    }
+    100% {
+        width: 51px;
     }
 }
 
@@ -442,13 +470,13 @@ body {
 
 @keyframes signupHover{
     0%{
-        width: 200px;
+        width: 220px;
     }
     50%{
         width: 350px;
     }
     100%{
-        width: 200px;
+        width: 220px;
     }
 }
 
@@ -469,13 +497,13 @@ body {
 
 @keyframes signinHover{
     0%{
-        width: 200px;
+        width: 210px;
     }
     50%{
         width: 300px;
     }
     100%{
-        width: 200px;
+        width: 210px;
     }
 }
 
