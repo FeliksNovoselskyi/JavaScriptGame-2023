@@ -142,7 +142,7 @@ signInButton.addEventListener("click", () => {
                     backgroundMusic.loop = true;
                     backgroundMusic.value = 0.1;
 
-                    // backgroundMusic.play();
+                    backgroundMusic.play();
 
                     window.scrollTo({
                         top: 700,
