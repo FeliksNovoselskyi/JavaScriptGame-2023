@@ -128,25 +128,32 @@ signInButton.addEventListener("click", () => {
                 const user = data[userId];
                 if (user.LOGIN === signInLoginUser && user.PASSWORD === signInPasswordUser){ 
 
+                    document.querySelector("body").style.backgroundImage = "url(images/bg1.png)";
+                    document.querySelector("#all").style.background = "none";
+                    document.querySelector("body").style.backgroundAttachment = "fixed";
                     document.getElementById("tab2").remove("active");
                     document.getElementById("tab3").style.display = "block";
                     document.getElementById("button1").style.display = "none";
                     document.getElementById("button2").style.display = "none";
                     document.getElementById("button3").style.display = "none";
-                    document.querySelector("body").style.backgroundImage = "url(images/bg1.png)";
-                    document.querySelector("body").style.backgroundAttachment = "fixed";
                     
                     let [listElem, hero] = createMap(listMap);
 
                     backgroundMusic.loop = true;
-                    backgroundMusic.value = 0.2;
+                    backgroundMusic.value = 0.1;
 
-                    backgroundMusic.play();
+                    // backgroundMusic.play();
+
+                    window.scrollTo({
+                        top: 700,
+                        left: 0,
+                        behavior: "smooth",
+                    });
 
                     function gameLoop(){
                         hero.gravity(listElem); // Вызываем метод который отвечает за гравитацию
                         hero.moveLoop(listElem); // Вызываем метод который отвечает за движения персонажа
-                        hero.fireAnimation(); // Вызывем метод который отвечает за анимацию огня
+                        hero.bulletCollisionAnimation(); // Вызывем метод который отвечает за анимацию огня
                         setTimeout(gameLoop, 1); // Метод, который вызывает функцию каждую миллисекунду
                     };
                     
@@ -179,11 +186,11 @@ signInButton.addEventListener("click", () => {
                     alert("Успішна авторизація"); 
                     return; // Возращаем произошедшее в условии
                 };
-            }
+            };
             alert("Неправильний логін або пароль");
-        })
+        });
 
-}) 
+});
 
 changeThemeButton.addEventListener("click", () => {
     themeCounter++; // Добавляем в themeCounter 1 при каждом клике для дальнейшей смены тем
@@ -191,7 +198,7 @@ changeThemeButton.addEventListener("click", () => {
     if (themeCounter % 2) {
         // Смена темы на светлую
         // меняем стили фона, размещение, высоты, задаём анимацию смены градиента на светлые цвета
-        document.getElementById("all").style.backgroundImage = "linear-gradient(to left,  rgb(118, 118, 118), rgb(128, 122, 122), rgb(177, 172, 172))";
+        document.getElementById("all").style.background = "linear-gradient(to left,  rgb(118, 118, 118), rgb(128, 122, 122), rgb(177, 172, 172))";
         document.getElementById("all").style.textAlign = "text-align: center";
         document.getElementById("all").style.height = "inherit";
         document.getElementById("all").style.animation = "changeSun 3s ease-out";
@@ -203,11 +210,11 @@ changeThemeButton.addEventListener("click", () => {
     else{
         // Смена темы на тёмную
         // меняем стили, фона, размещение, высоты, задаём анимацию смены градиента до тёмные цвета
-        document.getElementById("all").style.backgroundImage = "linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13))";
+        document.getElementById("all").style.background = "linear-gradient(to left,  rgb(40, 39, 39), rgb(21, 17, 17), rgb(16, 13, 13))";
         document.getElementById("all").style.textAlign = "text-align: center";
         document.getElementById("all").style.height = "inherit";
         document.getElementById("all").style.animation = "changeMoon 3s ease-out";
-
+        
         // Меняем символ текста на кнопке смены темы под соответствующую тему (тёмную)
         document.getElementById("button3").textContent = "☽";
     };

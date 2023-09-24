@@ -651,12 +651,49 @@ body {
     animation: none; 
 }
 
+#fire-image-animation1 {
+    animation: fire1Animation 2s infinite linear;
+}
+
+@keyframes fire1Animation {
+    0% {
+        background-image: url(images/fire/fire1.png);
+    }
+    50% {
+        background-image: url(images/fire/fire2.png);
+    }
+    75% {
+        background-image: url(images/fire/fire3.png);
+    }
+    100% {
+        background-image: url(images/fire/fire1.png);
+    }
+}
 
 #fire2 {
     position: absolute;
     margin-top: 1051px;
     margin-left: 490px;
     animation: none;
+}
+
+#fire-image-animation2 {
+    animation: fire2Animation 2s infinite linear;
+}
+
+@keyframes fire2Animation {
+    0% {
+        background-image: url(images/fire/fire1.png);
+    }
+    50% {
+        background-image: url(images/fire/fire2.png);
+    }
+    75% {
+        background-image: url(images/fire/fire3.png);
+    }
+    100% {
+        background-image: url(images/fire/fire1.png);
+    }
 }
 
 #fire3 {
@@ -666,6 +703,24 @@ body {
     animation: none;
 }
 
+#fire-image-animation3 {
+    animation: fire3Animation 2s infinite linear;
+}
+
+@keyframes fire3Animation {
+    0% {
+        background-image: url(images/fire/fire1.png);
+    }
+    50% {
+        background-image: url(images/fire/fire2.png);
+    }
+    75% {
+        background-image: url(images/fire/fire3.png);
+    }
+    100% {
+        background-image: url(images/fire/fire1.png);
+    }
+}
 
 #fire4 {
     position: absolute;
@@ -674,11 +729,49 @@ body {
     animation: none;
 }
 
+#fire-image-animation4 {
+    animation: fire4Animation 2s infinite linear;
+}
+
+@keyframes fire4Animation {
+    0% {
+        background-image: url(images/fire/fire1.png);
+    }
+    50% {
+        background-image: url(images/fire/fire2.png);
+    }
+    75% {
+        background-image: url(images/fire/fire3.png);
+    }
+    100% {
+        background-image: url(images/fire/fire1.png);
+    }
+}
+
 #fire5 {
     position: absolute;
     margin-top: 1051px;
     margin-left: 800px;
     animation: none;
+}
+
+#fire-image-animation5 {
+    animation: fire5Animation 2s infinite linear;
+}
+
+@keyframes fire5Animation {
+    0% {
+        background-image: url(images/fire/fire1.png);
+    }
+    50% {
+        background-image: url(images/fire/fire2.png);
+    }
+    75% {
+        background-image: url(images/fire/fire3.png);
+    }
+    100% {
+        background-image: url(images/fire/fire1.png);
+    }
 }
 
 @keyframes fireGoDown {
@@ -718,15 +811,57 @@ body {
     }
 }
 
-#main-boss {
-    margin-top: 442px;
-    margin-left: 460px;
-    position: absolute;
-}
-
-#main-bossimg {
+#boss {
     width: 100px;
     height: 100px;
+    background-size: 100px 100px;
+    position: absolute;
+    margin-top: 442px;
+    margin-left: 460px;
+    background-image: url(images/boss/boss.png);
+    animation: bossAnimation 2s infinite linear;
+}
+
+@keyframes bossAnimation {
+    0% {
+        background-image: url(images/boss/boss.png);
+    }
+    10% {
+        background-image: url(images/boss/boss2.png);
+    }
+    20% {
+        background-image: url(images/boss/boss3.png);
+    }
+    30% {
+        background-image: url(images/boss/boss4.png);
+    }
+    40% {
+        background-image: url(images/boss/boss5.png);
+    }
+    45% {
+        background-image: url(images/boss/boss6.png);
+    }
+    50% {
+        background-image: url(images/boss/boss7.png);
+    }
+    55% {
+        background-image: url(images/boss/boss6.png);
+    }
+    60% {
+        background-image: url(images/boss/boss5.png);
+    }
+    70% {
+        background-image: url(images/boss/boss4.png);
+    }
+    80% {
+        background-image: url(images/boss/boss3.png);
+    }
+    90% {
+        background-image: url(images/boss/boss2.png);
+    }
+    100% {
+        background-image: url(images/boss/boss.png);
+    }
 }
 
 #story {

@@ -40,6 +40,14 @@ class Rect {
         };
     };
 
+    scroll(x, y){
+        window.scrollTo({
+            top: y,
+            left: x,
+            behavior: "smooth",
+        });
+    };
+
     // Проверка коллизии с правой стороны от персонажа
     collisionRight(listElem, rect, key){
         for (let elem of listElem){
@@ -114,7 +122,6 @@ class Rect {
                             if (document.getElementById("fire1").style.marginTop != "481px") {
                                 this.BOSS_DEATH_FLAG2 = true;
                                 if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
-                                    console.log(1);
                                     document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
                                     document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
                                     document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
@@ -141,9 +148,10 @@ class Rect {
                                         this.BUTTONLVL3_RIGHT = false;
                                         setTimeout(() => {
                                             // console.log(21222222)
-                                            this.MAIN_BOSS_IMG = document.querySelector("#main-bossimg");
+                                            this.MAIN_BOSS_IMG = document.getElementById("boss");
 
-                                            this.MAIN_BOSS_IMG.src = "./images/boss_die.png";
+                                            this.MAIN_BOSS_IMG.style.backgroundImage = "url(images/boss_die.png)";
+                                            this.MAIN_BOSS_IMG.style.animation = "none";
 
                                             document.getElementById("p_story").textContent = `
                                             Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
@@ -247,6 +255,8 @@ class Rect {
 
                         this.DOOR_OPEN_SOUND.play();
 
+                        this.scroll(0, 400);
+
                         document.getElementById("modal-window-2").style.display = "block";
 
                         document.getElementById("coin-counter-image").style.display = "block";
@@ -284,6 +294,8 @@ class Rect {
                         elem.ELEMENT.remove();
 
                         this.DOOR_OPEN_SOUND.play();
+
+                        this.scroll(0, 0);
 
                         document.getElementById("modal-window-4").style.display = "block";
 
@@ -336,7 +348,6 @@ class Rect {
                             if (document.getElementById("fire1").style.marginTop != "481px") {
                                 this.BOSS_DEATH_FLAG2 = true;
                                 if (this.BOSS_DEATH_FLAG1 && this.BOSS_DEATH_FLAG2) {
-                                    console.log(1);
                                     document.getElementById("fire1").style.animation = "fireGoDown 2s ease-out";
                                     document.getElementById("fire2").style.animation = "fireGoDown 2s ease-out";
                                     document.getElementById("fire3").style.animation = "fireGoDown 2s ease-out";
@@ -363,9 +374,10 @@ class Rect {
                                         this.BUTTONLVL3_RIGHT = false;
                                         setTimeout(() => {
                                             // console.log(21222222)
-                                            this.MAIN_BOSS_IMG = document.querySelector("#main-bossimg");
+                                            this.MAIN_BOSS_IMG = document.getElementById("boss");
 
-                                            this.MAIN_BOSS_IMG.src = "./images/boss_die.png";
+                                            this.MAIN_BOSS_IMG.style.backgroundImage = "url(images/boss_die.png)";
+                                            this.MAIN_BOSS_IMG.style.animation = "none";
 
                                             document.getElementById("p_story").textContent = `
                                             Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 

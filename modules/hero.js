@@ -242,41 +242,7 @@ class Hero extends Sprite {
     };
     
     // Метод анимации огня
-    fireAnimation() {
-        // Если анимация дошла до конца переходим к первому кадру
-        if (this.FIRE_IMG_NUM >= 3){
-            // Если условие правдивое - задаём номер картинки на изначальный
-            // то есть 1
-            this.FIRE_IMG_NUM = 1;
-        };
-
-        // Добавляем по единице в свойство this.FIRE_IMG_NUM, для смены картинки
-        // в анимации
-        this.FIRE_IMG_NUM++;
-
-        // Изменяем изображение каждого огня 3 раза (сколько всего у нас
-        // изображений анимации огня)
-        document.getElementById("fire-image-animation1").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation1").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation1").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-
-        document.getElementById("fire-image-animation2").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation2").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation2").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-
-        document.getElementById("fire-image-animation3").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation3").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation3").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-
-
-        document.getElementById("fire-image-animation4").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation4").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation4").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-    
-        document.getElementById("fire-image-animation5").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation5").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-        document.getElementById("fire-image-animation5").src = `/images/fire/fire${this.FIRE_IMG_NUM}.png`;
-
+    bulletCollisionAnimation() {
         // Получаем пули по id
         this.BULLET1_A = document.getElementById("bullet1");
         this.BULLET2_A = document.getElementById("bullet2");
