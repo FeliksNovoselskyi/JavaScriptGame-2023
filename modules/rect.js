@@ -257,6 +257,9 @@ class Rect {
 
                         this.scroll(0, 400);
 
+                        document.getElementById("bat").style.left = "865px";
+                        document.getElementById("bat").style.animation = "batMove 5s infinite linear";
+                        
                         document.getElementById("modal-window-2").style.display = "block";
 
                         document.getElementById("coin-counter-image").style.display = "block";
@@ -296,6 +299,12 @@ class Rect {
                         this.DOOR_OPEN_SOUND.play();
 
                         this.scroll(0, 0);
+                        
+                        setTimeout(() => {
+                            document.getElementById("bat").style.left = "902px";
+                            document.getElementById("bat").style.animation = "none";
+                            document.getElementById("bat").style.display = "none";
+                        }, 1000);
 
                         document.getElementById("modal-window-4").style.display = "block";
 

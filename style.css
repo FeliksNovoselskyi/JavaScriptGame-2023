@@ -1026,8 +1026,8 @@ body {
 }
 
 #modal-window-5 {
-    width: 400px;
-    height: 220px;
+    width: 1600px;
+    height: 800px;
     position: fixed;
     z-index: 1;
     border-width: 0px;
@@ -1036,18 +1036,107 @@ body {
     display: none;
 }
 
-#button-x-modal-window-5 {
-    margin-right: -95%;
-    margin-top: 0%;
-    border-color: #d9d8d8;
-    background-color: #d9d8d8;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 16px;
-    border-width: 0px;
-    user-select: none;
+#modal-windows-paragraphs {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 200px;
 }
 
-#button-x-modal-window-5:hover {
-    border-color: #bdbcbc;
-    background-color: #bdbcbc;
+#modal-windows-list-of-developers {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 125px;
+}
+
+#bat {
+    width: 40px;
+    height: 40px;
+    top: 773px;
+    left: 902px;
+    background-size: 40px 40px;
+    /* border-radius: 7px; */
+    position: relative;
+    background-image: url(images/bat.png);
+    animation: none;
+}
+
+@keyframes batMove{
+    0%{
+        left: 865px;
+        background-image: url(images/bat.png);
+    }
+    5% {
+        background-image: url(images/bat2.png);
+    }
+    10% {
+        background-image: url(images/bat.png);
+    }
+    15% {
+        background-image: url(images/bat2.png);
+    }
+    20% {
+        background-image: url(images/bat.png);
+    }
+    25% {
+        background-image: url(images/bat2.png);
+    }
+    30% {
+        background-image: url(images/bat.png);
+    }
+    35% {
+        background-image: url(images/bat2.png);
+    }
+    40% {
+        background-image: url(images/bat.png);
+    } 
+    45% {
+        background-image: url(images/bat2.png);
+    }
+    50%{
+        left: 570px;
+        background-image: url(images/bat.png);
+    }
+    55% {
+        background-image: url(images/bat2.png);
+    }
+    60% {
+        background-image: url(images/bat.png);
+    }
+    65% {
+        background-image: url(images/bat2.png);
+    }
+    70% {
+        background-image: url(images/bat.png);
+    }
+    75% {
+        background-image: url(images/bat2.png);
+    }
+    80% {
+        background-image: url(images/bat.png);
+    }
+    85% {
+        background-image: url(images/bat2.png);
+    }
+    90% {
+        background-image: url(images/bat.png);
+    }
+    95% {
+        background-image: url(images/bat2.png);
+    }
+    100%{
+        left: 865px;
+        background-image: url(images/bat.png);
+    }
+}
+
+@keyframes batAnimation{
+    0%{
+        background-image: url(images/bat.png);
+    }
+    50%{
+        background-image: url(images/bat2.png);
+    }
+    100%{
+        background-image: url(images/bat.png);
+    }
 }

@@ -43,6 +43,10 @@ class Hero extends Sprite {
         this.BULLET_HP_FLAG = false;
 
         this.ARROW_RIGHT_SHOOT_FLAG = false;
+
+        this.BAT_HP_FLAG = false;
+
+        this.BAT_COUNTER = 0;
     };
 
     // Метод гравитации
@@ -208,6 +212,8 @@ class Hero extends Sprite {
                 this.ELEMENT.remove();
                 // Изменяем текст главного параграфа игры на текст поражения
                 document.getElementById("p1game").textContent = "Game over!";
+                document.getElementById("modal-window-5").style.display = "block";
+                document.getElementById("modal-windows-paragraphs").textContent = "Ви програли!";
             };
         };
 
@@ -241,6 +247,149 @@ class Hero extends Sprite {
         setTimeout(() => this.GRAVITY_SPEED = 2, 425);
     };
     
+    batCollisionAnimation() {
+        // Получаем пули по id
+        this.BAT1_A = document.getElementById("bat");
+
+        // Получаем вычесленные стили пуль,
+        // делая это с помощью метода getComputedStyle в обьекте window
+        this.BAT1_COMPUTED_STYLE = window.getComputedStyle(this.BAT1_A);
+       
+        // this.ELEMENT_COMPUTED_STYLE = window.getComputedStyle(this.ELEMENT)
+        
+        // Получаем значения стилей left и top каждой пули
+        this.BA1_LEFT = this.BAT1_COMPUTED_STYLE.getPropertyValue('left');
+        this.BA1_TOP = this.BAT1_COMPUTED_STYLE.getPropertyValue('top');
+        
+        // this.E_LEFT = this.ELEMENT_COMPUTED_STYLE.getPropertyValue('left')
+
+        // Преобразуем координаты пулей по X из строки в дробь,
+        // а потом из дроби в число
+        this.BAT1_LEFT = parseInt(parseFloat(this.BA1_LEFT));
+        // Преобразуем координаты пулей по Y из строки в дробь,
+        this.BAT1_TOP = parseFloat(this.BA1_TOP);
+
+        // console.log(this.X)
+        // console.log(this.BAT1_LEFT)
+        // Блок условий коллизии первой пули с персонажем
+        if (this.BAT1_LEFT == this.X && this.Y == 780 
+            || this.BAT1_LEFT == this.X - 1 && this.Y == 780
+            || this.BAT1_LEFT == this.X + 1 && this.Y == 780
+            || this.BAT1_LEFT == this.X - 2 && this.Y == 780
+            || this.BAT1_LEFT == this.X + 2 && this.Y == 780
+            || this.BAT1_LEFT == this.X - 3 && this.Y == 780
+            || this.BAT1_LEFT == this.X + 3 && this.Y == 780
+            || this.BAT1_LEFT == this.X - 4 && this.Y == 780
+            || this.BAT1_LEFT == this.X + 4 && this.Y == 780
+            || this.BAT1_LEFT == this.X - 5 && this.Y == 780
+            || this.BAT1_LEFT == this.X + 5 && this.Y == 780
+            
+            || this.BAT1_LEFT == this.X && this.Y == 779
+            || this.BAT1_LEFT == this.X && this.Y == 781
+            || this.BAT1_LEFT == this.X && this.Y == 778
+            || this.BAT1_LEFT == this.X && this.Y == 782
+            || this.BAT1_LEFT == this.X && this.Y == 777
+            || this.BAT1_LEFT == this.X && this.Y == 783
+            || this.BAT1_LEFT == this.X && this.Y == 776
+            || this.BAT1_LEFT == this.X && this.Y == 784
+            || this.BAT1_LEFT == this.X && this.Y == 775
+            || this.BAT1_LEFT == this.X && this.Y == 785
+            
+            || this.BAT1_LEFT == this.X - 1 && this.Y == 779
+            || this.BAT1_LEFT == this.X + 1 && this.Y == 781
+            || this.BAT1_LEFT == this.X - 2 && this.Y == 778
+            || this.BAT1_LEFT == this.X + 2 && this.Y == 782
+            || this.BAT1_LEFT == this.X - 3 && this.Y == 777
+            || this.BAT1_LEFT == this.X + 3 && this.Y == 783
+            || this.BAT1_LEFT == this.X - 4 && this.Y == 776
+            || this.BAT1_LEFT == this.X + 4 && this.Y == 784
+            || this.BAT1_LEFT == this.X - 5 && this.Y == 775
+            || this.BAT1_LEFT == this.X + 5 && this.Y == 785) {
+            this.BAT_COUNTER++
+            this.BAT_HP_FLAG = true;
+            // Условие смерти персонажа
+            if (this.BAT_HP_FLAG) {
+                if (this.BAT_COUNTER == 10) {
+                    this.BAT_COUNTER = 0;
+                    // Получаем id тега картинки с хп баром
+                    this.HP_BAR = document.querySelector("#hpbarimg");
+                    // Отнимаем от счётчика хп единицу при попадании в огонь
+                    this.HP_COUNTER -= 1;
+
+                    this.HP_MINUS_SOUND = new Audio("sounds/hp_minus.wav")
+                    this.HP_MINUS_SOUND.play();
+
+                    // 9 хп
+                    if (this.HP_COUNTER == 9) {
+                        this.HP_BAR.src = "./images/hp/9.png";
+                    };
+                
+                    // 8 хп
+                    if (this.HP_COUNTER == 8) {
+                        this.HP_BAR.src = "./images/hp/8.png";
+                    };
+                
+                    // 7 хп
+                    if (this.HP_COUNTER == 7) {
+                        this.HP_BAR.src = "./images/hp/7.png";
+                    };
+                
+                    // 6 хп
+                    if (this.HP_COUNTER == 6) {
+                        this.HP_BAR.src = "./images/hp/6.png";
+                    };
+                
+                    // 5 хп
+                    if (this.HP_COUNTER == 5) {
+                        this.HP_BAR.src = "./images/hp/5.png";
+                    };
+                
+                    // 4 хп
+                    if (this.HP_COUNTER == 4) {
+                        this.HP_BAR.src = "./images/hp/4.png";
+                    };
+
+                    // 3 хп
+                    if (this.HP_COUNTER == 3) {
+                        this.HP_BAR.src = "./images/hp/3.png";
+                    };
+                
+                    // 2 хп
+                    if (this.HP_COUNTER == 2) {
+                        this.HP_BAR.src = "./images/hp/2.png";
+                    };
+                
+                    // 1 хп
+                    if (this.HP_COUNTER == 1) {
+                        this.HP_BAR.src = "./images/hp/1.png";
+                    };
+                
+                    // 0 хп
+                    if (this.HP_COUNTER == 0) {
+                        this.HP_BAR.src = "./images/hp/0.png";
+                        // Убираем персонажа
+                        this.ELEMENT.remove();
+                        // Изменяем текст главного параграфа игры на текст поражения
+                        document.getElementById("p1game").textContent = "Game over!";
+                        document.getElementById("modal-window-5").style.display = "block";
+                        document.getElementById("modal-windows-paragraphs").textContent = "Ви програли!";
+                    };
+                };
+                // // Получаем id тега картинки с хп баром
+                // this.HP_BAR = document.querySelector("#hpbarimg");
+                // // console.log(this.BULLET_LEFT1);
+                // // console.log(this.X);
+                // this.HP_BAR.src = "./images/hp/0.png";
+                // // Убираем персонажа
+                // this.ELEMENT.remove();
+                // // Изменяем текст главного параграфа игры на текст поражения
+                // document.getElementById("p1game").textContent = "Game over!";
+            };
+        };
+
+        // console.log(this.BULLET1_LEFT)
+    }
+
     // Метод анимации огня
     bulletCollisionAnimation() {
         // Получаем пули по id
@@ -315,6 +464,8 @@ class Hero extends Sprite {
                 this.ELEMENT.remove();
                 // Изменяем текст главного параграфа игры на текст поражения
                 document.getElementById("p1game").textContent = "Game over!";
+                document.getElementById("modal-window-5").style.display = "block";
+                document.getElementById("modal-windows-paragraphs").textContent = "Ви програли!";
             };
         };
 
@@ -365,6 +516,8 @@ class Hero extends Sprite {
                 this.ELEMENT.remove();
                 // Изменяем текст главного параграфа игры на текст поражения
                 document.getElementById("p1game").textContent = "Game over!";
+                document.getElementById("modal-window-5").style.display = "block";
+                document.getElementById("modal-windows-paragraphs").textContent = "Ви програли!";
             };
         };
         // console.log(this.BULLET1_LEFT)

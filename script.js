@@ -154,6 +154,7 @@ signInButton.addEventListener("click", () => {
                         hero.gravity(listElem); // Вызываем метод который отвечает за гравитацию
                         hero.moveLoop(listElem); // Вызываем метод который отвечает за движения персонажа
                         hero.bulletCollisionAnimation(); // Вызывем метод который отвечает за анимацию огня
+                        hero.batCollisionAnimation();
                         setTimeout(gameLoop, 1); // Метод, который вызывает функцию каждую миллисекунду
                     };
                     
@@ -233,20 +234,15 @@ authorizationTab.addEventListener("click", (event) => {
 
 buttonXModalWindow2.addEventListener("click", () => {
     document.getElementById("modal-window-2").style.display = "none";
-})
+});
 
 buttonXModalWindow3.addEventListener("click", () => {
     document.getElementById("modal-window-3").style.display = "none";
-})
+});
 
 buttonXModalWindow4.addEventListener("click", () => {
     document.getElementById("modal-window-4").style.display = "none";
-})
-
-buttonXModalWindow5.addEventListener("click", () => {
-    document.getElementById("modal-window-5").style.display = "none";
-})
-
+});
 
 // Функция открытия вкладки
 function openTab(event, tabName){
