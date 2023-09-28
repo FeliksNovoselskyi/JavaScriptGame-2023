@@ -183,6 +183,7 @@ class Rect {
                                             document.getElementById("modal-window-5").style.display = "block";
 
                                             this.BOSS_DEATH_SOUND.play();
+
                                         }, 3000);
                                     }, 2000);
 
@@ -197,6 +198,8 @@ class Rect {
                                     document.getElementById("fire3").style.marginTop = "505px";
                                     document.getElementById("fire4").style.marginTop = "505px";
                                     document.getElementById("fire5").style.marginTop = "505px";
+
+                                    return "hero_win";
                                 };
                             };
                         };
@@ -433,6 +436,8 @@ class Rect {
                                     document.getElementById("fire3").style.marginTop = "505px";
                                     document.getElementById("fire4").style.marginTop = "505px";
                                     document.getElementById("fire5").style.marginTop = "505px";
+
+                                    return "hero_win";
                                 };
                             };
     

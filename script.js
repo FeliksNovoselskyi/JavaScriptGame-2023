@@ -140,7 +140,7 @@ signInButton.addEventListener("click", () => {
                     let [listElem, hero] = createMap(listMap);
 
                     backgroundMusic.loop = true;
-                    backgroundMusic.value = 0.1;
+                    backgroundMusic.volume = 0.30;
 
                     backgroundMusic.play(); // Запускаємо музику гри
 

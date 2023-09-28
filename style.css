@@ -1027,7 +1027,7 @@ body {
 
 #modal-window-5 {
     width: 1600px;
-    height: 800px;
+    height: 800px; 
     position: fixed;
     z-index: 1;
     border-width: 0px;

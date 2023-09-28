@@ -229,6 +229,11 @@ class Hero extends Sprite {
 
         };
 
+        if (collisionLeft == "hero_win" || collisionRight == "hero_win") {
+            console.log(1)
+            this.ELEMENT.remove();
+        }
+
 
     //    if (.style.left >= this.ELEMENT.left) {
             // this.ELEMENT.remove()
