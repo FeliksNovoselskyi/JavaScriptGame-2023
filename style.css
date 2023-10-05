@@ -17,10 +17,22 @@ body {
     height: inherit;
     justify-content: center;
     margin: auto;
-    animation: none;  
+    /* animation: none;   */
     /* background-image: url(images/bg1.png);
     background-attachment: fixed; */
     background-size: cover;
+    opacity: 0;
+    animation: interfaceAnimation 2.5s forwards;
+}
+
+@keyframes interfaceAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes changeSun{
@@ -398,7 +410,6 @@ body {
     align-items: center;
     font-family:'IBM Plex Mono', monospace;
     font-size: 20px;
-    
 }
 
 .tablinks:hover {
@@ -589,6 +600,18 @@ body {
     border-color: transparent;
     margin-left: 1215px;
     position: fixed;
+    animation: hpAnimation 2.5s forwards;
+    
+}
+
+@keyframes hpAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 #bullet1 {
@@ -641,125 +664,70 @@ body {
     top: -20px;
     user-select: none;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 #fire1 {
+    display: none;
     position: absolute;
-    margin-top: 1051px;
+    margin-top: 1081px;
     margin-left: 160px;
     animation: none; 
 }
 
 #fire-image-animation1 {
-    animation: fire1Animation 2s infinite linear;
-}
-
-@keyframes fire1Animation {
-    0% {
-        background-image: url(images/fire/fire1.png);
-    }
-    50% {
-        background-image: url(images/fire/fire2.png);
-    }
-    75% {
-        background-image: url(images/fire/fire3.png);
-    }
-    100% {
-        background-image: url(images/fire/fire1.png);
-    }
+    animation: none;
 }
 
 #fire2 {
+    display: none;
     position: absolute;
-    margin-top: 1051px;
+    margin-top: 1081px;
     margin-left: 490px;
     animation: none;
 }
 
 #fire-image-animation2 {
-    animation: fire2Animation 2s infinite linear;
-}
-
-@keyframes fire2Animation {
-    0% {
-        background-image: url(images/fire/fire1.png);
-    }
-    50% {
-        background-image: url(images/fire/fire2.png);
-    }
-    75% {
-        background-image: url(images/fire/fire3.png);
-    }
-    100% {
-        background-image: url(images/fire/fire1.png);
-    }
+    animation: none;
 }
 
 #fire3 {
+    display: none;
     position: absolute;
-    margin-top: 1051px;
+    margin-top: 1081px;
     margin-left: 590px;
     animation: none;
 }
 
 #fire-image-animation3 {
-    animation: fire3Animation 2s infinite linear;
-}
-
-@keyframes fire3Animation {
-    0% {
-        background-image: url(images/fire/fire1.png);
-    }
-    50% {
-        background-image: url(images/fire/fire2.png);
-    }
-    75% {
-        background-image: url(images/fire/fire3.png);
-    }
-    100% {
-        background-image: url(images/fire/fire1.png);
-    }
+    animation: none;
 }
 
 #fire4 {
+    display: none;
     position: absolute;
-    margin-top: 1051px;
+    margin-top: 1081px;
     margin-left: 710px;
     animation: none;
 }
 
 #fire-image-animation4 {
-    animation: fire4Animation 2s infinite linear;
-}
-
-@keyframes fire4Animation {
-    0% {
-        background-image: url(images/fire/fire1.png);
-    }
-    50% {
-        background-image: url(images/fire/fire2.png);
-    }
-    75% {
-        background-image: url(images/fire/fire3.png);
-    }
-    100% {
-        background-image: url(images/fire/fire1.png);
-    }
+    animation: none;
 }
 
 #fire5 {
+    display: none;
     position: absolute;
-    margin-top: 1051px;
+    margin-top: 1081px;
     margin-left: 800px;
     animation: none;
 }
 
 #fire-image-animation5 {
-    animation: fire5Animation 2s infinite linear;
+    animation: none;
 }
 
-@keyframes fire5Animation {
+@keyframes fireAnimation {
     0% {
         background-image: url(images/fire/fire1.png);
     }
@@ -794,6 +762,16 @@ body {
     }
 }
 
+@keyframes fireGoUpLevel2 {
+    0% {
+        margin-top: 1081px;
+    }
+
+    100% {
+        margin-top: 1053px;
+    }
+}
+
 
 #arrowlvl3 {
     margin-top: 488px;
@@ -819,7 +797,7 @@ body {
     margin-top: 442px;
     margin-left: 460px;
     background-image: url(images/boss/boss.png);
-    animation: bossAnimation 2s infinite linear;
+    animation: none;
 }
 
 @keyframes bossAnimation {
@@ -869,26 +847,39 @@ body {
     margin-left: 1200px;
     position: fixed;
     margin-top: 50px;
+    animation: storyAnimation 2.5s forwards;
 }
+
+@keyframes storyAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
 
 #p_story {
    color: white; 
    font-size: 15px;
    user-select: none;
+   
 }
 
 #coin-counter-image {
     margin-top: -66px;
     margin-left: -1810px;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 #coin-counter-image-img {
     width: 35px;
     height: 35px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -896,14 +887,14 @@ body {
     margin-top: -66px;
     margin-left: -1610px;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 #hairpin-counter-image-img {
     width: 35px;
     height: 35px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 #hairpin-counter {
@@ -915,17 +906,28 @@ body {
     top: -20px;
     user-select: none;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 #modal-window-1 {
     width: 400px;
     height: 100px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     border-width: 0px;
     border-radius: 16px;
     background-color: #f2eeee;
+    animation: modalWindow1Animation 2.5s forwards;
+}
+
+@keyframes modalWindow1Animation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 #button-x-modal-window-1 {
@@ -948,11 +950,22 @@ body {
     width: 400px;
     height: 120px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     border-width: 0px;
     border-radius: 16px;
     background-color: #f2eeee;
     display: none;
+    animation: modalWindow2Animation 2.5s forwards;
+}
+
+@keyframes modalWindow2Animation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 #button-x-modal-window-2 {
@@ -975,11 +988,23 @@ body {
     width: 400px;
     height: 80px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     border-width: 0px;
     border-radius: 16px;
     background-color: #f2eeee;
     display: none;
+    animation: modalWindow3Animation 2.5s forwards;
+
+}
+
+@keyframes modalWindow3Animation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 #button-x-modal-window-3 {
@@ -1002,11 +1027,22 @@ body {
     width: 400px;
     height: 100px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     border-width: 0px;
     border-radius: 16px;
     background-color: #f2eeee;
     display: none;
+    animation: modalWindow4Animation 2.5s forwards;
+}
+
+@keyframes modalWindow4Animation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 #button-x-modal-window-4 {
@@ -1029,12 +1065,24 @@ body {
     width: 1600px;
     height: 800px; 
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     border-width: 0px;
     border-radius: 16px;
     background-color: #f2eeee;
     display: none;
+    animation: modalWindow5Animation 2.5s forwards;
 }
+
+@keyframes modalWindow5Animation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
 
 #modal-windows-paragraphs {
     font-size: 60px;
@@ -1138,5 +1186,49 @@ body {
     }
     100%{
         background-image: url(images/bat.png);
+    }
+}
+
+#fog-image1 {
+    background-image: url(images/fog.png);
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 943px;
+    height: 615px;
+    background-size: 943px 615px;
+    margin-top: 560px;
+    margin-left: 0%;
+    animation: none;
+}
+
+/* @keyframes fogAnimation1{ 
+    0%{
+        background-image: url(images/fog.png);
+    }
+    100%{
+        background-image: url(images/fog_box.png);
+    }
+} */
+
+#fog-image2 {
+    background-image: url(images/fog.png);
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 943px;
+    height: 615px;
+    background-size: 943px 615px;
+    margin-top: 25px;
+    margin-left: 0%;
+    animation: none;
+}
+
+@keyframes fogAnimation{ 
+    0%{
+        background-image: url(images/fog.png);
+    }
+    100%{
+        background-image: url(images/fog_box.png);
     }
 }

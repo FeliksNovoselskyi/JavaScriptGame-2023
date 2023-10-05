@@ -270,6 +270,34 @@ class Rect {
                         document.getElementById("hairpin-counter-image").style.display = "block";
                         document.getElementById("hairpin-counter").style.display = "block";
 
+                        document.getElementById("fog-image1").style.animation = "fogAnimation 5s ease-out";
+
+                        document.getElementById("fire1").style.display = "block";
+                        document.getElementById("fire2").style.display = "block";
+                        document.getElementById("fire3").style.display = "block";
+                        document.getElementById("fire4").style.display = "block";
+                        document.getElementById("fire5").style.display = "block";
+
+                        document.getElementById("fire1").style.animation = "fireGoUpLevel2 2s ease-out";
+                        document.getElementById("fire2").style.animation = "fireGoUpLevel2 2s ease-out";
+                        document.getElementById("fire3").style.animation = "fireGoUpLevel2 2s ease-out";
+                        document.getElementById("fire4").style.animation = "fireGoUpLevel2 2s ease-out";
+                        document.getElementById("fire5").style.animation = "fireGoUpLevel2 2s ease-out";
+
+                        document.getElementById("fire1").style.marginTop = "1053px";
+                        document.getElementById("fire2").style.marginTop = "1053px";
+                        document.getElementById("fire3").style.marginTop = "1053px";
+                        document.getElementById("fire4").style.marginTop = "1053px";
+                        document.getElementById("fire5").style.marginTop = "1053px";
+
+                        document.getElementById("fire-image-animation1").style.animation = "fireAnimation 2s infinite linear";
+                        document.getElementById("fire-image-animation2").style.animation = "fireAnimation 2s infinite linear";
+                        document.getElementById("fire-image-animation3").style.animation = "fireAnimation 2s infinite linear";
+                        document.getElementById("fire-image-animation4").style.animation = "fireAnimation 2s infinite linear";
+                        document.getElementById("fire-image-animation5").style.animation = "fireAnimation 2s infinite linear";
+                        // animation: fire5Animation 2s infinite linear;
+                        
+
                         document.getElementById("p_story").textContent = `Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
                         і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
                         і на останньому поверсі вам доведеться битися з могутнім обличчям, здолавши якого ви зможете повернуться. у свій світ
@@ -282,6 +310,10 @@ class Rect {
                         За що той нам дасть ключ від дверей, що ведуть на лісницю 2 поверх.`;
 
                         this.OPEN_DOOR_FLAG = false;
+
+                        setTimeout(() => {
+                            document.getElementById("fog-image1").style.display = "none";
+                        }, 5000)
 
                     // Условие взятия монет и прибавления к счётчику 1-ы
                     } else if (elem.IMG_PATH.includes("coin")) {
@@ -319,6 +351,11 @@ class Rect {
                             document.getElementById("coin-counter-image").style.display = "none";
                             document.getElementById("counter").style.display = "none";
                         }, 1000);
+                        
+                        document.getElementById("fog-image2").style.animation = "fogAnimation 5s ease-out";
+                        
+                        document.getElementById("boss").style.animation = "bossAnimation 2s infinite linear";
+                        // bossAnimation 2s infinite linear
 
                         document.getElementById("p_story").textContent = `Передмова: Йтиметься про маг, який під час битви перемістився в інший світ, 
                         і що б повернуться в рідний світ йому потрібно буде піднятися на верхній поверх вежі повної загадок і супротивників, 
@@ -339,6 +376,10 @@ class Rect {
                         після покупки шпильок ми зможуть відчиняться двері на наступний рівень.`;
 
                         this.OPEN_DOOR_FLAG = false;
+
+                        setTimeout(() => {
+                            document.getElementById("fog-image2").style.display = "none";
+                        }, 5000)
                     
                     
                     } else if (elem.IMG_PATH.includes("buttonlvl3")) {
